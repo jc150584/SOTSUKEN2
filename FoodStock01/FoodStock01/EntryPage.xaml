@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodStock01.EntryPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start"
+                     Margin="20, 30, 20, 30">
+
+            <Grid Margin="0, 0, 0, 10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="食材"
+                       HorizontalOptions="End" 
+                       Grid.Column="0" Grid.Row="0" />
+                <Switch HorizontalOptions="Center"
+                        Grid.Column="1" Grid.Row="0" 
+                        Toggled="SelectSwitch"/>
+                <Label Text="保存食品"
+                       HorizontalOptions="Start" 
+                       Grid.Column="2" Grid.Row="0" />
+            </Grid>
+
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0" Grid.Row="0"
+                             VerticalOptions="CenterAndExpand"
+                             Margin="0, 0, 0, 10">
+                    <Image x:Name="image"
+                           Source="icon.png"
+                           WidthRequest="140"/>
+                    <Button Text="写真を撮影" 
+                           x:Name="PictureButton" BorderColor="Blue" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Grid.Row="0"
+                             VerticalOptions="Center"
+                             Margin="0, 0, 0, 10">
+                    <Label Text="食品名（任意）"/>
+                    <Entry Placeholder="【食品名】入力してください"
+                            x:Name="NemeEntry"
+                            IsEnabled="True"/>
+                    <Label Text="※レシピの検索に使用します"
+                            FontSize="14" />
+                </StackLayout>
+
+            </Grid>
+
+            <StackLayout Margin="0, 0, 0, 10">
+                <Label Text="消費期限・賞味期限（食材のみ）"/>
+                <DatePicker Format="D"
+                            x:Name="FoodPicker"
+                            IsEnabled="True"/>
+            </StackLayout>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout HorizontalOptions="Start"
+                    Grid.Column="0" Grid.Row="0"
+                    Margin="0, 0, 0, 10">
+                    <Label Text="数量（保存食品のみ）"/>
+                    <Entry Placeholder="【数量】入力してください"
+                           x:Name="NumEntry"
+                           IsEnabled="False"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Grid.Column="1" Grid.Row="0"
+                    Margin="0, 0, 0, 10">
+                    <Label Text="単位（保存食品のみ）"/>
+                    <Entry Placeholder="【単位】入力してください"
+                           x:Name="UnitEntry"
+                           IsEnabled="False"/>
+                </StackLayout>
+            </Grid>
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

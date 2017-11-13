@@ -11,24 +11,17 @@ namespace FoodStock01
     {
         public App()
         {
-            InitializeComponent();
-
-            MainPage = new FoodStock01.MainPage();
-        }
-
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+            // TabbedPageをMainPageとしてセットする
+            MainPage = new TabbedPage()
+            {
+                Children = {
+                   new FoodPage("食材"),
+                   new StockPage("保存"),
+                   new EntryPage("登録"),
+                   new MemoPage("メモ"),
+                   new SettingPage("設定")
+                }
+            };
         }
     }
 }
