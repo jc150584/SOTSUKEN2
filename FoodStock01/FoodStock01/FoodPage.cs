@@ -25,6 +25,7 @@ namespace FoodStock01
             };
 
             Content = label1;
+
         }
     }
 }
