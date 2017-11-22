@@ -95,6 +95,12 @@
                 </StackLayout>
             </Grid>
 
+            <Button Text="登録"
+                    x:Name="EntryButton" />
+
+            <Label Text="エンコード結果"
+                   x:Name="EncoBase64" />
+
 
         </StackLayout>
 
