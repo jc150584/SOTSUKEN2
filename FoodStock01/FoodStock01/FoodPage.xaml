@@ -28,16 +28,7 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <controls:CircleImage 
-										BorderColor="Aqua"
-										BorderThickness="3"
-										HeightRequest="66"
-										HorizontalOptions="CenterAndExpand"
-										VerticalOptions="CenterAndExpand"
-										Aspect="AspectFill"
-                                       WidthRequest="66"
-                                       Grid.RowSpan="2"
-                                       Source="{Binding Image}"/>
+              
                                 <Label Grid.Column="1"
                                        Text="{Binding Name}"
 									   VerticalOptions="End"/>
