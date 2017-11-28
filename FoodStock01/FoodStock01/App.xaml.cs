@@ -15,9 +15,9 @@ namespace FoodStock01
             MainPage = new TabbedPage()
             {
                 Children = {
-                   new FoodPage("食材"),
+                   new FoodPage1("食材"),
                    new StockPage("保存"),
-                   new EntryPage("登録"),
+                   new EntryPage1("登録"),
                    new MemoPage("メモ"),
                    new SettingPage("設定")
                 }
