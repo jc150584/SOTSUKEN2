@@ -30,8 +30,8 @@ namespace FoodStock01
 
             // テンプレートの作成
             var cell = new DataTemplate(typeof(ImageCell));      
-            cell.SetBinding(ImageCell.TextProperty, "Name"+"\nDate" + "日"+"&#x2610");
-            cell.SetBinding(ImageCell.DetailProperty, "");
+            cell.SetBinding(ImageCell.TextProperty, "Name"+"Date" + "日"+"&#x2610");
+            cell.SetBinding(ImageCell.DetailProperty, " ");
 
             // リストビューを生成する
             var listView = new ListView
