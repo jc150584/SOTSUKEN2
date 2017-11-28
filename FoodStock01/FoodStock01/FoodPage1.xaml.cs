@@ -15,6 +15,10 @@ namespace FoodStock01
     {
         public FoodPage1(string title)
         {
+
+            //タイトル
+            Title = title;
+
             InitializeComponent();
 
             var ar = new ObservableCollection<Data>(); 
@@ -27,7 +31,7 @@ namespace FoodStock01
             // テンプレートの作成
             var cell = new DataTemplate(typeof(ImageCell));      
             cell.SetBinding(ImageCell.TextProperty, "Name");      
-            cell.SetBinding(ImageCell.DetailProperty, "Date");
+            cell.SetBinding(ImageCell.TextProperty, "Date"+"日");
           
 
             // リストビューを生成する
