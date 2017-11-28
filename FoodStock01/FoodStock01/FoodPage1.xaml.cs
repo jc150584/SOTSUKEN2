@@ -25,15 +25,16 @@ namespace FoodStock01
             ar.Add(new Data { Name = "にんじん", Date = "6" });
 
             // テンプレートの作成
-            var cell = new DataTemplate(typeof(ImageCell));        // <-3
-            cell.SetBinding(ImageCell.TextProperty, "Name");        // <-4
-            cell.SetBinding(ImageCell.DetailProperty, "Date");     // <-5
+            var cell = new DataTemplate(typeof(ImageCell));      
+            cell.SetBinding(ImageCell.TextProperty, "Name");      
+            cell.SetBinding(ImageCell.DetailProperty, "Date");
+          
 
             // リストビューを生成する
             var listView = new ListView
             {
                 ItemsSource = ar,
-                RowHeight = 50
+                 ItemTemplate = cell
             };
 
             Content = new StackLayout
@@ -44,7 +45,7 @@ namespace FoodStock01
         }
 
         class Data
-        { // <-1
+        { 
             public String Name { get; set; }
             public String Date { get; set; }
         }
