@@ -140,10 +140,6 @@
     <Reference Include="System.Windows" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="WindowsBase, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.4.0.280\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>

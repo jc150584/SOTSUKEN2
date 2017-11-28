@@ -38,9 +38,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EntryPage.xaml.cs">
-      <DependentUpon>EntryPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="EntryPage1.xaml.cs">
       <DependentUpon>EntryPage1.xaml</DependentUpon>
     </Compile>
@@ -101,12 +98,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="EntryPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FoodPage.xaml">
