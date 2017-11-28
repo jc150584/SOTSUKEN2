@@ -21,23 +21,18 @@ namespace FoodStock01
 
             InitializeComponent();
 
-            var ar = new ObservableCollection<Data>(); 
-            ar.Add(new Data { Name = "バナナ", Date = "2"});
-            ar.Add(new Data { Name = "りんご", Date = "4" });
-            ar.Add(new Data { Name = "トマト", Date = "3" });
-            ar.Add(new Data { Name = "いちご", Date = "4" });
-            ar.Add(new Data { Name = "にんじん", Date = "6" });
+            var ar = new ObservableCollection<String>();
+            ar.Add(string.Format("ばなな"+"\t"+"4"+"日"+"\u2610"));
+            ar.Add(string.Format("にんじん" + "\t" + "5" + "日" + "\u2610"));
+            ar.Add(string.Format("とまと" + "\t" + "3" + "日" + "\u2610"));
+            ar.Add(string.Format("ぴーまん" + "\t" + "7" + "日" + "\u2610"));
 
-            // テンプレートの作成
-            var cell = new DataTemplate(typeof(ImageCell));      
-            cell.SetBinding(ImageCell.TextProperty, "Name");
-            cell.SetBinding(ImageCell.DetailProperty, "Date"+"日");
 
             // リストビューを生成する
             var listView = new ListView
             {
                 ItemsSource = ar,
-                ItemTemplate = cell
+                RowHeight = 50
             };
 
             Content = new StackLayout
@@ -45,12 +40,6 @@ namespace FoodStock01
                 Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0), // iOSのみ上部にマージンをとる
                 Children = { listView }
             };
-        }
-
-        class Data
-        { 
-            public String Name { get; set; }
-            public String Date { get; set; }
         }
     }
 }
