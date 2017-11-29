@@ -19,7 +19,8 @@ namespace FoodStock01
             //タイトル
             Title = title;
 
-            
+            //アイコン
+            Icon = "apple.svg";
 
             InitializeComponent();
 
