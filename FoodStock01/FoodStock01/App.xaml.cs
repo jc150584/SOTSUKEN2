@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Reflection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Xamarin.Forms;
+
 
 namespace FoodStock01
 {
@@ -11,6 +12,7 @@ namespace FoodStock01
     {
         public App()
         {
+
             // TabbedPageをMainPageとしてセットする
             MainPage = new TabbedPage()
             {

@@ -19,6 +19,8 @@ namespace FoodStock01
             //タイトル
             Title = title;
 
+            
+
             InitializeComponent();
 
             var ar = new ObservableCollection<String>();

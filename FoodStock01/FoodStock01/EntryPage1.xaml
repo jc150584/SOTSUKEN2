@@ -76,6 +76,9 @@
             <Button Text="登録"
                     x:Name="EntryButton" />
 
+            <Image Source="image2.jpeg"
+                   HorizontalOptions="Center"/>
+
 
         </StackLayout>
 
