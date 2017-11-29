@@ -103,12 +103,12 @@
                 
                 <Button Text="登録"
                     Style="{StaticResource ButtonStyle}"
-                    x:Name="EntryButton" 
+                    x:Name="EntryButton1" 
                     Grid.Column="0" Grid.Row="0" />
 
                 <Button Text="続けて登録"
                     Style="{StaticResource ButtonStyle}"
-                    x:Name="EntryButton"
+                    x:Name="EntryButton2"
                     Grid.Column="1" Grid.Row="0"/>
             </Grid>
 
