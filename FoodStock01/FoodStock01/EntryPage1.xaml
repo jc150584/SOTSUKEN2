@@ -2,7 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FoodStock01.EntryPage1">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="BackgroundColor" Value="DeepSkyBlue"/>
+                <Setter Property="BorderColor" Value="Black"/>
+                <Setter Property="HeightRequest" Value="42"/>
+                <Setter Property="BorderRadius" Value="5"/>
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="Width" Value="80" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
+        <Label Text="登録"
+               TextColor="White"
+               BackgroundColor="DeepSkyBlue"/>
         <StackLayout VerticalOptions="Start"
                      Margin="20, 30, 20, 30">
 
@@ -73,12 +92,28 @@
                 </StackLayout>
             </Grid>
 
-            <Button Text="登録"
-                    x:Name="EntryButton" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <Button Text="登録"
+                    Style="{StaticResource ButtonStyle}"
+                    x:Name="EntryButton" 
+                    Grid.Column="0" Grid.Row="0" />
+
+                <Button Text="続けて登録"
+                    Style="{StaticResource ButtonStyle}"
+                    x:Name="EntryButton"
+                    Grid.Column="1" Grid.Row="0"/>
+            </Grid>
 
             <Image Source="image2.jpeg"
                    HorizontalOptions="Center"/>
-
 
         </StackLayout>
 
