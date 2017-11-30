@@ -24,8 +24,7 @@
                TextColor="White"
                BackgroundColor="DeepSkyBlue"/>
         
-        <ScrollView x:Name="ScrollView1"
-                  Orientation="Both">
+        <ScrollView>
 
             <StackLayout VerticalOptions="Start"
                      Margin="20, 30, 20, 30">
