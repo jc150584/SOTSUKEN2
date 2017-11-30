@@ -23,7 +23,10 @@
         <StackLayout>
             <Label Text="登録"
                TextColor="White"
-               BackgroundColor="#00aced"/>
+               FontSize="30"
+               BackgroundColor="#00aced"
+               HeightRequest="100"
+               VerticalOptions="Center"/>
 
         <StackLayout VerticalOptions="Start"
                      Margin="20, 30, 20, 30">
