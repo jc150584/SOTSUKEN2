@@ -20,15 +20,16 @@
 
     <ContentPage.Content>
 
-        <Label Text="登録"
+        <!--<Label Text="登録"
                TextColor="White"
-               BackgroundColor="DeepSkyBlue"/>
+               BackgroundColor="DeepSkyBlue"/>-->
 
-        <StackLayout VerticalOptions="Start"
+        <ScrollView>
+
+            <StackLayout VerticalOptions="Start"
                      Margin="20, 30, 20, 30">
-            <ScrollView>
 
-                <Grid Margin="0, 0, 0, 10">
+            <Grid Margin="0, 0, 0, 10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
@@ -118,9 +119,9 @@
                 <Image Source="image2.jpeg"
                    HorizontalOptions="Center"/>
 
-        </ScrollView>
-
-        </StackLayout>
+             </StackLayout>
+            
+        </ScrollView>　
 
     </ContentPage.Content>
 </ContentPage>
