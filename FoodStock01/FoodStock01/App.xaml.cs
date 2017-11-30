@@ -18,7 +18,7 @@ namespace FoodStock01
             {
                 Children = {
                    new FoodPage1("食材"),
-                   new StockPage("保存"),
+                   new StockPage1("保存"),
                    new EntryPage1("登録"),
                    new MemoPage("メモ"),
                    new SettingPage("設定")

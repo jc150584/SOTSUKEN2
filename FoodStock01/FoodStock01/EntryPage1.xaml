@@ -22,13 +22,11 @@
 
     <ContentPage.Content>
 
-        <!--<Label Text="登録"
+        <Label Text="登録"
                TextColor="White"
-               BackgroundColor="DeepSkyBlue"/>-->
+               BackgroundColor="DeepSkyBlue"/>
 
-        <ScrollView>
-
-            <StackLayout VerticalOptions="Start"
+        <StackLayout VerticalOptions="Start"
                      Margin="20, 30, 20, 30">
 
             <Grid Margin="0, 0, 0, 10">
@@ -116,14 +114,15 @@
                     Style="{StaticResource ButtonStyle}"
                     Grid.Column="1" Grid.Row="0"/>
             </Grid>-->
-
+            <!--<ScrollView>
 
                 <Image Source="image2.jpeg"
                    HorizontalOptions="Center"/>
 
-             </StackLayout>
-            
-        </ScrollView>　
+
+            </ScrollView> 　-->
+
+        </StackLayout>
 
     </ContentPage.Content>
 </ContentPage>
