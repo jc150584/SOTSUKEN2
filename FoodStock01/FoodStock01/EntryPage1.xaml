@@ -20,7 +20,8 @@
 
     <ContentPage.Content>
 
-        <Label Text="登録"
+        <StackLayout>
+            <Label Text="登録"
                TextColor="White"
                BackgroundColor="#00aced"/>
 
@@ -120,6 +121,7 @@
 
             </ScrollView> 　-->
 
+        </StackLayout>
         </StackLayout>
 
     </ContentPage.Content>
