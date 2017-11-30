@@ -22,7 +22,7 @@
 
         <Label Text="登録"
                TextColor="White"
-               BackgroundColor="DeepSkyBlue"/>
+               BackgroundColor="#00aced"/>
 
         <StackLayout VerticalOptions="Start"
                      Margin="20, 30, 20, 30">
