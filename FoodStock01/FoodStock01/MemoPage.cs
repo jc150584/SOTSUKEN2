@@ -14,8 +14,8 @@ namespace FoodStock01
             //タブに表示される文字列
             Title = title;
 
-            //アイコン
-            Icon = "memo.svg";
+           /* //アイコン
+            Icon = "memo.svg";*/
 
             //ラベルを生成
             var label1 = new Label

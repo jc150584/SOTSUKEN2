@@ -17,8 +17,8 @@ namespace FoodStock01
             //タイトル
             Title = title;
 
-            //アイコン
-            Icon = "puls.svg";
+            /*//アイコン
+            Icon = "puls.svg";*/
 
             //初期化
             InitializeComponent();
