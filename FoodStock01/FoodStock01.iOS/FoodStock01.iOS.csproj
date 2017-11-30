@@ -184,6 +184,21 @@
   <ItemGroup>
     <BundleResource Include="Resources\image2.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\apple01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gear01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\plus01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\note01.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
