@@ -15,7 +15,7 @@ namespace FoodStock01
             Title = title;
 
            //アイコン
-            Icon = "gear01.png";
+            Icon = "gear32.png";
 
             //ラベルを生成
             var label1 = new Label

@@ -18,7 +18,7 @@ namespace FoodStock01
             Title = title;
 
             //アイコン
-            Icon = "puls01.png";
+            Icon = "plus32.png";
 
             //初期化
             InitializeComponent();

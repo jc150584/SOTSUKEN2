@@ -20,7 +20,7 @@ namespace FoodStock01
             Title = title;
 
            //アイコン
-            Icon = "apple01.png";
+            Icon = "apple32.png";
 
             InitializeComponent();
 
