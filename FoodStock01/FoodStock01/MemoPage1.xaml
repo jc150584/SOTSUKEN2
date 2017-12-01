@@ -36,9 +36,9 @@
                   Orientation="Both">
             <StackLayout Spacing="10" Padding="10">
                 <Label Text="Label01" />
-                ……省略（Label02～Label06）……
+                <!--……省略（Label02～Label06）……-->
                 <Label Text="Label07" x:Name="Label07" />
-                ……省略（Label08～Label11）……
+                <!--……省略（Label08～Label11）……-->
                 <Label Text="Label12" />
             </StackLayout>
         </ScrollView>
