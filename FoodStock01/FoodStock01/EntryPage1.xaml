@@ -20,7 +20,7 @@
 
     <ContentPage.Content>
 
-        <ScrollView>
+        <!--<ScrollView>-->
             <StackLayout VerticalOptions="Start"
                      Margin="20, 30, 20, 30">
 
@@ -111,14 +111,13 @@
             </Grid>-->
             <!--<ScrollView>-->
 
-            <Image Source="image2.jpeg"
-                   HorizontalOptions="Center"/>
+            <Image Source="image2.jpeg"/>
 
 
             <!--</ScrollView>-->
 
         </StackLayout>
-        </ScrollView>
+        <!--</ScrollView>-->
         
         <Button Text="登録" />
     </ContentPage.Content>

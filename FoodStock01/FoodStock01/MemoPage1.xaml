@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodStock01.MemoPage1">
+    <ContentPage.Resources>
+    <ResourceDictionary>
+        <Style TargetType="ContentPage">
+            <Setter Property="Padding">
+                <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+            </Setter>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="HeightRequest" Value="100" />
+            <Setter Property="WidthRequest" Value="600" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="Accent" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="Accent" />
+            <Setter Property="HeightRequest" Value="75" />
+            <Setter Property="WidthRequest" Value="250" />
+            <Setter Property="Margin" Value="0,5,0,15" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+        </Style>
+    </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label Text="ScrollView サンプル" TextColor="Accent"
+           BackgroundColor="Transparent" />
+        <ScrollView x:Name="ScrollView1" BackgroundColor="Yellow"
+                  Orientation="Both">
+            <StackLayout Spacing="10" Padding="10">
+                <Label Text="Label01" />
+                ……省略（Label02～Label06）……
+                <Label Text="Label07" x:Name="Label07" />
+                ……省略（Label08～Label11）……
+                <Label Text="Label12" />
+            </StackLayout>
+        </ScrollView>
+        <Button Clicked="Button_Clicked" Text="Label07までスクロール" />
+    </StackLayout>
+</ContentPage>
