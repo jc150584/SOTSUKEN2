@@ -110,6 +110,5 @@
             <Image Source="image2.jpeg"/>
 
         </StackLayout>
-        <Button Text="登録" />
     </ContentPage.Content>
 </ContentPage>
