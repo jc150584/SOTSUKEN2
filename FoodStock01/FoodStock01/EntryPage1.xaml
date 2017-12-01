@@ -20,7 +20,8 @@
 
     <ContentPage.Content>
 
-        <StackLayout VerticalOptions="Start"
+        <ScrollView>
+            <StackLayout VerticalOptions="Start"
                      Margin="20, 30, 20, 30">
 
             <Grid Margin="0, 0, 0, 10">
@@ -117,5 +118,8 @@
             <!--</ScrollView>-->
 
         </StackLayout>
+        </ScrollView>
+        
+        <Button Text="登録" />
     </ContentPage.Content>
 </ContentPage>
