@@ -5,15 +5,13 @@
 
    <ContentPage.Resources>
         <ResourceDictionary>
-            <Style x:Key="ButtonStyle" TargetType="Button">
-                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
-                <Setter Property="BackgroundColor" Value="DeepSkyBlue"/>
-                <Setter Property="BorderColor" Value="Black"/>
-                <Setter Property="HeightRequest" Value="42"/>
-                <Setter Property="BorderRadius" Value="5"/>
-                <Setter Property="BorderWidth" Value="0" />
-                <Setter Property="TextColor" Value="White"/>
-                <Setter Property="Width" Value="80" />
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="DeepSkyBlue" />
+                <Setter Property="HeightRequest" Value="75" />
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="Margin" Value="0,5,0,15" />
+                <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -115,7 +113,7 @@
                  <Image Source="image2.jpeg"/>
                 </StackLayout>
             </ScrollView>
-            <Button Text="登録" Style="{StaticResource ButtonStyle}"/>
+            <Button Text="登録"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
