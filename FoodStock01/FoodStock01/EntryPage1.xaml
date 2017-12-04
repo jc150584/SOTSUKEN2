@@ -115,7 +115,7 @@
                  <Image Source="image2.jpeg"/>
                 </StackLayout>
             </ScrollView>
-            <Button Text="登録" Style="ButtonStyle"/>
+            <Button Text="登録" Style="{StaticResource ButtonStyle}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
