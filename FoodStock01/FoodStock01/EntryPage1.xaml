@@ -7,9 +7,10 @@
         <ResourceDictionary>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White" />
-                <Setter Property="BackgroundColor" Value="DeepSkyBlue" />
-                <Setter Property="HeightRequest" Value="75" />
-                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="BackgroundColor" Value="DodgerBlue" />
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="WidthRequest" Value="200" />
                 <Setter Property="Margin" Value="0,5,0,15" />
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
@@ -20,7 +21,7 @@
 
         <StackLayout VerticalOptions="Start"
                      Margin="20, 30, 20, 30">
-            <Label Text="登録" TextColor="DeepSkyBlue"
+            <Label Text="登録" TextColor="DodgerBlue"
                    BackgroundColor="Transparent"/>
             <ScrollView>
                 <StackLayout>
@@ -62,36 +63,39 @@
                             IsEnabled="True"/>
                 </StackLayout>
 
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    
-                    <StackLayout HorizontalOptions="Start"
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout HorizontalOptions="Start"
                         Grid.Column="0" Grid.Row="0"
                         Margin="0, 0, 0, 10">
-                        <Label Text="数量（保存食品のみ）"/>
-                        <Entry Placeholder="【数量】入力してください"
+                            <Label Text="数量（保存食品のみ）"/>
+                            <Entry Placeholder="【数量】入力してください"
                               x:Name="NumEntry"
                               IsEnabled="False"/>
-                    </StackLayout>
+                        </StackLayout>
 
-                    <StackLayout HorizontalOptions="Start"
+                        <StackLayout HorizontalOptions="Start"
                         Grid.Column="1" Grid.Row="0"
                         Margin="0, 0, 0, 10">
-                        <Label Text="単位（保存食品のみ）"/>
-                        <Entry Placeholder="【単位】入力してください"
+                            <Label Text="単位（保存食品のみ）"/>
+                            <Entry Placeholder="【単位】入力してください"
                                x:Name="UnitEntry"
                                IsEnabled="False"/>
-                    </StackLayout>
-                </Grid>
+                        </StackLayout>
+                    </Grid>
 
+                    <Image Source="image2.jpeg"/>
+                </StackLayout>
+            </ScrollView>
 
-            <!-- <Grid>
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
@@ -101,19 +105,12 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Text="登録"
-                    Style="{StaticResource ButtonStyle}"
                     Grid.Column="0" Grid.Row="0" />
 
                 <Button Text="続けて登録"
-                    Style="{StaticResource ButtonStyle}"
                     Grid.Column="1" Grid.Row="0"/>
-            </Grid>-->
+            </Grid>
 
-                    
-                 <Image Source="image2.jpeg"/>
-                </StackLayout>
-            </ScrollView>
-            <Button Text="登録"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
