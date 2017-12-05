@@ -46,26 +46,11 @@ namespace FoodStock01
             };
 
 
-            var layout = new StackLayout
+            Content = new StackLayout
             { 
                 Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0), // iOSのみ上部にマージンをとる
-                Children = { listView }
+                Children = { label1, listView }
             };
-
-            ScrollView scr = new ScrollView
-            {
-                Orientation = ScrollOrientation.Vertical,
-                VerticalOptions = LayoutOptions.Center,
-                HorizontalOptions = LayoutOptions.Center
-            };
-
-            layout.Children.Add(scr);
-            StackLayout sLayout = new StackLayout()
-            {
-                VerticalOptions = LayoutOptions.Center,
-                HorizontalOptions = LayoutOptions.Center
-            };
-            scr.Content = sLayout;
         }
     }
 }
