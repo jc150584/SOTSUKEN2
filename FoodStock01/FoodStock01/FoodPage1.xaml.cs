@@ -38,11 +38,34 @@ namespace FoodStock01
                 RowHeight = 50
             };
 
-            Content = new StackLayout
+            var label1 = new Label
+            {
+                Text = "食品リスト",
+                TextColor = Color.DodgerBlue,
+                BackgroundColor = Color.Transparent
+            };
+
+
+            var layout = new StackLayout
             { 
                 Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0), // iOSのみ上部にマージンをとる
                 Children = { listView }
             };
+
+            ScrollView scr = new ScrollView
+            {
+                Orientation = ScrollOrientation.Vertical,
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.Center
+            };
+
+            layout.Children.Add(scr);
+            StackLayout sLayout = new StackLayout()
+            {
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.Center
+            };
+            scr.Content = sLayout;
         }
     }
 }
