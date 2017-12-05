@@ -3,6 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FoodStock01.FoodPage1">
     <ContentPage.Content>
-        
+        <ListView x:Name="foodList" IsPullToRefreshEnabled="True">
+            <ListView.ItemTemplate>
+                <ViewCell>
+                    <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="15,5,0,0">
+                        <StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Horizontal" Spacing="10">
+                            <Image Source="fruit_banana.png" />
+                            <Label Text="バナナ" />
+                            <Label Text="5日" />
+                            <Label Text="\u2610" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>
