@@ -2,19 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FoodStock01.FoodPage1">
+    <ContentPage.BindingContext>
+        <local:ListPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                0, 20, 0, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
     <ContentPage.Content>
-        <ListView x:Name="foodList" IsPullToRefreshEnabled="True">
+        <ListView HasUnevenRows="true"
+                  ItemsSource="{Binding Magics}">
             <ListView.ItemTemplate>
-                <ViewCell>
-                    <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="15,5,0,0">
-                        <StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Horizontal" Spacing="10">
-                            <Image Source="fruit_banana.png" />
-                            <Label Text="バナナ" />
-                            <Label Text="5日" />
-                            <Label Text="\u2610" />
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal"
+                                     Padding="10,5,10,5">
+                            <BoxView WidthRequest="40"
+                                     VerticalOptions="StartAndExpand"
+                                     Color="Green"/>
+                            <StackLayout HorizontalOptions="StartAndExpand"
+                                         Orientation="Vertical">
+                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding Spell}" Font="Italic, Small" />
+                            </StackLayout>
                         </StackLayout>
-                    </StackLayout>
-                </ViewCell>
+                    </ViewCell>
+                </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
     </ContentPage.Content>
