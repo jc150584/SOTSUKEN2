@@ -20,7 +20,7 @@
     <ContentPage.Content>
 
         <StackLayout VerticalOptions="Start"
-                     Margin="20, 30, 20, 0">
+                     Margin="20, 30, 20, 10">
             <Label Text="登録" TextColor="DodgerBlue"
                    BackgroundColor="Transparent"/>
             <ScrollView>
