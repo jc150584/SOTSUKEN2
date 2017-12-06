@@ -32,8 +32,7 @@
                        BackgroundColor="Transparent"
                        Grid.Column="0" Grid.Row="0"/>
                 <StackLayout Grid.Column="1" Grid.Row="0"
-                             VerticalOptions="End">
-                    
+                             HorizontalOptions="End" >
                     <Label Text="レシピ検索" FontSize="14" TextColor="DodgerBlue"/>
                     <Image Source="search24.png" />
                 </StackLayout>
