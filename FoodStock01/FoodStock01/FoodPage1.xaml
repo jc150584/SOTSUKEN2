@@ -43,7 +43,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Padding="10,5,10,5">
+                        <Grid Padding="25,5,25,5">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
@@ -64,7 +64,8 @@
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
                                     <Label Text="{Binding Date}" 
-                                           Grid.Column="0" Grid.Row="0" />
+                                           Grid.Column="0" Grid.Row="0"
+                                           HorizontalOptions="End"/>
                                     <Label Text="日" 
                                            Grid.Column="1" Grid.Row="0"
                                            HorizontalOptions="Start" />
@@ -74,7 +75,7 @@
                                     HorizontalOptions="Center"
                                     VerticalOptions="Center"/>
 
-                            </Grid>
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
