@@ -19,9 +19,26 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Start"
                      Margin="20, 30, 20, 10">
-            <Label Text="食材リスト" TextColor="DodgerBlue"
-                   BackgroundColor="Transparent"/>
-        <ListView HasUnevenRows="true"
+            <Grid Padding="10,5,10,5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="食材リスト" TextColor="DodgerBlue"
+                       BackgroundColor="Transparent"
+                       Grid.Column="0" Grid.Row="0"/>
+                <StackLayout Grid.Column="1" Grid.Row="0"
+                             VerticalOptions="End">
+                    
+                    <Label Text="レシピ検索" FontSize="14" TextColor="DodgerBlue"/>
+                    <Image Source="search24.png" />
+                </StackLayout>
+            </Grid>
+            <ListView HasUnevenRows="true"
                   ItemsSource="{Binding Magics}">
             <ListView.ItemTemplate>
                 <DataTemplate>
