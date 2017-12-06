@@ -22,19 +22,23 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid>
+                        <Grid Padding="10,5,10,5">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
                             <Label Text="{Binding Name}" 
                                     Grid.Column="0" Grid.Row="0"/>
-                            <Label Text="{Binding Spell}" Font="Italic, Small" 
+                            <Label Text="{Binding Spell}"
                                     Grid.Column="1" Grid.Row="0"/>
+                            <Label Text="{Binding Cbox}"
+                                    Grid.Column="2" Grid.Row="0"/>
+                            
 
                         </Grid>
                     </ViewCell>
