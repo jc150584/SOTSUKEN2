@@ -17,7 +17,8 @@
     </ContentPage.Padding>
 
     <ContentPage.Content>
-        <Label Text="食材リスト" TextColor="DodgerBlue"
+        <StackLayout>
+            <Label Text="食材リスト" TextColor="DodgerBlue"
                    BackgroundColor="Transparent"/>
         <ListView HasUnevenRows="true"
                   ItemsSource="{Binding Magics}">
@@ -38,16 +39,16 @@
                                     Grid.Column="0" Grid.Row="0"/>
                             <Label Text="{Binding Spell}"
                                     Grid.Column="1" Grid.Row="0"/>
-                            <Label Text="{Binding Cbox}"
+                                <Label Text="{Binding Cbox}"
                                     Grid.Column="2" Grid.Row="0"
                                     HorizontalOptions="Center"
                                     VerticalOptions="Center"/>
-                            
 
-                        </Grid>
+                            </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
