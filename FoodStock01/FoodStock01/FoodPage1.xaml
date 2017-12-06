@@ -22,11 +22,21 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Vertical"
-                                     Padding="10,5,10,5">
-                            <Label Text="{Binding Name}" />
-                            <Label Text="{Binding Spell}" Font="Italic, Small" />
-                        </StackLayout>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Name}" 
+                                    Grid.Column="0" Grid.Row="0"/>
+                            <Label Text="{Binding Spell}" Font="Italic, Small" 
+                                    Grid.Column="1" Grid.Row="0"/>
+
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
