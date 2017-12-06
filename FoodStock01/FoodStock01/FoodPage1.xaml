@@ -38,6 +38,30 @@
                     <Image Source="search24.png" />
                 </StackLayout>
             </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="食材名" 
+                       BackgroundColor="Transparent"
+                       Grid.Column="0" Grid.Row="0"/>
+                <Label Text="消費期限・賞味期限" 
+                       BackgroundColor="Transparent"
+                       Grid.Column="1" Grid.Row="0"/>
+                <Label Text="レシピ選択" 
+                       BackgroundColor="Transparent"
+                       Grid.Column="2" Grid.Row="0"
+                       HorizontalOptions="End"/>
+                
+            </Grid>
+
             <ListView HasUnevenRows="true"
                   ItemsSource="{Binding Magics}">
             <ListView.ItemTemplate>
@@ -75,7 +99,7 @@
                             </Grid>
                             <Label Text="{Binding Cbox}"
                                 Grid.Column="2" Grid.Row="0"
-                                HorizontalOptions="Center"
+                                HorizontalOptions="End"
                                 VerticalOptions="Center"/>
 
                         </Grid>
