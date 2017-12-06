@@ -25,7 +25,7 @@ namespace FoodStock01
             //タイトル
             Title = title;
 
-           //アイコン
+            //アイコン
             Icon = "apple32.png";
 
             InitializeComponent();
@@ -84,6 +84,7 @@ namespace FoodStock01
             };
 
         }
+    }
 
     public class Magic
     {
