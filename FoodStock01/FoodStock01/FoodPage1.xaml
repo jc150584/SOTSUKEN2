@@ -19,7 +19,7 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Start"
                      Margin="20, 30, 20, 10">
-            <Grid Padding="10,5,10,5">
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
@@ -32,7 +32,8 @@
                        BackgroundColor="Transparent"
                        Grid.Column="0" Grid.Row="0"/>
                 <StackLayout Grid.Column="1" Grid.Row="0"
-                             HorizontalOptions="End" >
+                             HorizontalOptions="End"
+                             VerticalOptions="Center">
                     <Label Text="レシピ検索" FontSize="14" TextColor="DodgerBlue"/>
                     <Image Source="search24.png" />
                 </StackLayout>
@@ -54,7 +55,7 @@
 
                             <Label Text="{Binding Name}" 
                                     Grid.Column="0" Grid.Row="0"/>
-                            <Label Text="{Binding Spell}"
+                            <Label Text="{Binding Date}日"
                                     Grid.Column="1" Grid.Row="0"/>
                                 <Label Text="{Binding Cbox}"
                                     Grid.Column="2" Grid.Row="0"
