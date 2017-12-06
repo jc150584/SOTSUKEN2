@@ -140,10 +140,6 @@
     <Reference Include="System.Windows" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="WindowsBase, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.4.0.280\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
@@ -169,6 +165,54 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\fruit_banana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\apple.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\box.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gear.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\memo.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\puls.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\image2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\apple01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gear01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\plus01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\note01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gear32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\note32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\plus32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\apple32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cube32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,8 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FoodStock01;assembly=FoodStock01"
              x:Class="FoodStock01.FoodPage1">
+    
+    <ContentPage.BindingContext>
+        <local:FoodPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                0, 20, 0, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
     <ContentPage.Content>
-        
+        <StackLayout>
+            <Label Text="食材リスト" TextColor="DodgerBlue"
+                   BackgroundColor="Transparent"/>
+        <ListView HasUnevenRows="true"
+                  ItemsSource="{Binding Magics}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10,5,10,5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Name}" 
+                                    Grid.Column="0" Grid.Row="0"/>
+                            <Label Text="{Binding Spell}"
+                                    Grid.Column="1" Grid.Row="0"/>
+                                <Label Text="{Binding Cbox}"
+                                    Grid.Column="2" Grid.Row="0"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"/>
+
+                            </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

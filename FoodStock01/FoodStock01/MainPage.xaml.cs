@@ -12,6 +12,7 @@ namespace FoodStock01
         public MainPage()
         {
             InitializeComponent();
+            
         }
     }
 }

@@ -14,6 +14,9 @@ namespace FoodStock01
             //タブに表示される文字列
             Title = title;
 
+           //アイコン
+            Icon = "note32.png";
+
             //ラベルを生成
             var label1 = new Label
             {
