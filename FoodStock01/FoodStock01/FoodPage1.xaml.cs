@@ -49,7 +49,20 @@ namespace FoodStock01
                 Padding = new Thickness(20, 30, 20, 0), 
                 Children = { label1, listView }
             };*/
+        }
 
+        void ChackBoxChanged(object sender, bool isChecked)
+        {
+            //選択された時の処理
+            if (isChecked)
+            {
+                
+            }
+            //選択が外された時の処理
+            else
+            {
+
+            }
         }
     }
 }

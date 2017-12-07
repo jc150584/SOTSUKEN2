@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FoodStock01;assembly=FoodStock01"
+             xmlns:toolkit="clr-namespace:FoodStock01;assembly=FoodStock01"
              x:Class="FoodStock01.FoodPage1">
     
     <ContentPage.BindingContext>
@@ -39,7 +40,7 @@
                 </StackLayout>
             </Grid>
 
-            <Grid>
+            <Grid Padding="10,20,10,20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
@@ -55,7 +56,7 @@
                 <Label Text="消費期限・賞味期限" 
                        BackgroundColor="Transparent"
                        Grid.Column="1" Grid.Row="0"/>
-                <Label Text="レシピ選択" 
+                <Label Text="レシピ使用" 
                        BackgroundColor="Transparent"
                        Grid.Column="2" Grid.Row="0"
                        HorizontalOptions="End"/>
@@ -97,16 +98,22 @@
                                        HorizontalOptions="Start"
                                        VerticalOptions="End"/>
                             </Grid>
-                            <Label Text="{Binding Cbox}"
+                                <toolkit:CheckBox CheckedChanged="ChackBoxChanged" 
+                                                  Grid.Column="2" Grid.Row="0"
+                                                  HorizontalOptions="End"
+                                                  VerticalOptions="Center"/>
+                                <!--<Label Text="{Binding Cbox}"
                                 Grid.Column="2" Grid.Row="0"
                                 HorizontalOptions="End"
-                                VerticalOptions="Center"/>
+                                VerticalOptions="Center"/>-->
 
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+            <Label Text="検索ワード" x:Name="Searchword"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
