@@ -12,6 +12,18 @@ namespace FoodStock01
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CheckBox : ContentView
 	{
+        public static readonly BindableProperty TextProperty =
+            BindableProperty.Create(
+                "Text",
+                typeof(string),
+                typeof(CheckBox),
+                null,
+                propertyChanged: (bindable, oldValue, newValue) =>
+                {
+                    ((CheckBox)bindable).textLabel.Text = (string)newValue;
+                });
+
+
         public static readonly BindableProperty IsCheckedProperty =
             BindableProperty.Create(
                 "IsChecked",
@@ -37,6 +49,12 @@ namespace FoodStock01
         public CheckBox()
         {
             InitializeComponent();
+        }
+
+        public string Text
+        {
+            set { SetValue(TextProperty, value); }
+            get { return (string)GetValue(TextProperty); }
         }
 
         public bool IsChecked

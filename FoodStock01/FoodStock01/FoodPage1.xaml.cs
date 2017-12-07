@@ -61,7 +61,7 @@ namespace FoodStock01
             //選択が外された時の処理
             else
             {
-
+               
             }
         }
     }
