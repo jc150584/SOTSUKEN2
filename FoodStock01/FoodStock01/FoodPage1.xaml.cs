@@ -20,6 +20,7 @@ namespace FoodStock01
             //アイコン
             Icon = "apple32.png";
 
+
             InitializeComponent();
 
             /*var ar = new ObservableCollection<String>();
@@ -49,6 +50,21 @@ namespace FoodStock01
                 Padding = new Thickness(20, 30, 20, 0), 
                 Children = { label1, listView }
             };*/
+
+        }
+
+        private void Search_Clicked(object sender, EventArgs e)
+        { 
+            //webview生成
+            var webView = new WebView
+            {
+                Source = new UrlWebViewSource
+                {
+                    Url = "https://cookpad.com/",
+                },
+            };
+            //コンテンツとして配置
+            Content = webView;
         }
 
         void ChackBoxChanged(object sender, bool isChecked)
