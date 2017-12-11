@@ -4,7 +4,9 @@
              x:Class="FoodStock01.SearchWebView">
   <ContentView.Content>
       <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
+            <WebView Source="https://cookpad.com/search/"
+                   HeightRequest="1000"
+                   WidthRequest="1000" />
+        </StackLayout>
   </ContentView.Content>
 </ContentView>

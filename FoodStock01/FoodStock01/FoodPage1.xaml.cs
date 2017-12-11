@@ -54,7 +54,7 @@ namespace FoodStock01
 
         }
 
-        private void Search_Clicked(object sender, EventArgs e)
+        void Search_Clicked(object sender, EventArgs e)
         { 
             //webview生成
             new SearchWebView();

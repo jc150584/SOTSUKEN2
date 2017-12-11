@@ -10,14 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace FoodStock01
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SearchWebView : WebView
+	public partial class SearchWebView : ContentView
 	{
 		public SearchWebView ()
 		{
-            new UrlWebViewSource
-            {
-                Url = "https://cookpad.com/search/",
-            };
-        }
-    }
+			InitializeComponent ();
+		}
+	}
 }
