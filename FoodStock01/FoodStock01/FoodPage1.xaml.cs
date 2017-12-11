@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using FoodStock01;
 
 namespace FoodStock01
 {
@@ -56,15 +57,7 @@ namespace FoodStock01
         private void Search_Clicked(object sender, EventArgs e)
         { 
             //webview生成
-            var webView = new WebView
-            {
-                Source = new UrlWebViewSource
-                {
-                    Url = "https://cookpad.com/",
-                },
-            };
-            //コンテンツとして配置
-            Content = webView;
+            new SearchWebView();
         }
 
         void ChackBoxChanged(object sender, bool isChecked)
