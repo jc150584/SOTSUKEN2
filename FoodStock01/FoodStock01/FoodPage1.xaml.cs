@@ -42,7 +42,8 @@ namespace FoodStock01
 
         void OnSearch_Clicked(object sender, EventArgs args)
         {
-            RecipePage = new RecipePage("レシピ","にんじん");
+            var Recipe = new RecipePage("レシピ","にんじん");
+            RecipePage.ContentProperty = Recipe;
         }
     }
 }
