@@ -42,8 +42,11 @@ namespace FoodStock01
 
         void OnSearch_Clicked(object sender, EventArgs args)
         {
-            var Recipe = new RecipePage("レシピ","にんじん");
-            RecipePage.ContentProperty = Recipe;
+            var Recipe = new WebView
+            {
+                Source = "http://cookpad.com/search/"
+            };
+            Content = Recipe;
         }
     }
 }
