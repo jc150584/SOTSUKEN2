@@ -16,8 +16,7 @@
             <Label Text="レシピ"
                    TextColor="DodgerBlue"
                    BackgroundColor="Transparent"/>
-            <WebView Source="http://cookpad.com/" 
-                     Scale="YES"/>
+            <WebView Source="http://cookpad.com/" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
