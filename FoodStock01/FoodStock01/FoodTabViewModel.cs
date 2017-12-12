@@ -14,7 +14,7 @@ namespace FoodStock01
 
         public FoodTabViewModel()
         {
-            GoToRecipe = new Xamarin.Forms.Command((PageName) =>
+            GoToRecipe = new Command((PageName) =>
             {
                 var Page = PageName as FoodPage1;
                 var ParentPage = Page.Parent as TabbedPage;
