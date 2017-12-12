@@ -54,11 +54,11 @@ namespace FoodStock01
 
         }
 
-        void Search_Clicked(object sender, EventArgs e)
+       /* void Search_Clicked(object sender, EventArgs e)
         { 
             //webview生成
             new SearchWebView();
-        }
+        }*/
 
         void ChackBoxChanged(object sender, bool isChecked)
         {
