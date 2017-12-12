@@ -68,57 +68,57 @@
 
             <ListView HasUnevenRows="true"
                   ItemsSource="{Binding Magics}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid Padding="10,20,10,20">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-
-                            <Label Text="{Binding Name}" 
-                                   Grid.Column="0" Grid.Row="0"
-                                   FontSize="Large"/>
-                            <Grid Grid.Column="1" Grid.Row="0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10,20,10,20">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Date}" 
+
+                                <Label Text="{Binding Name}" 
+                                   Grid.Column="0" Grid.Row="0"
+                                   FontSize="Large"/>
+                                <Grid Grid.Column="1" Grid.Row="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Date}" 
                                        Grid.Column="0" Grid.Row="0"
                                        HorizontalOptions="End"
                                        FontSize="Large"/>
-                                <Label Text="日" 
+                                    <Label Text="日" 
                                        Grid.Column="1" Grid.Row="0"
                                        HorizontalOptions="Start"
                                        VerticalOptions="End"/>
-                            </Grid>
-                                <toolkit:CheckBox CheckedChanged="ChackBoxChanged" 
+                                </Grid>
+
+                                <Button Text="レシピ検索" 
+                                        Clicked="OnSearch_Clicked"/>
+                                <!--<toolkit:CheckBox CheckedChanged="ChackBoxChanged" 
                                                   Grid.Column="2" Grid.Row="0"
                                                   HorizontalOptions="End"
-                                                  VerticalOptions="Center"
-                                                  Text="{Binding Name}"/>
-                            
+                                                  VerticalOptions="Center"/>-->
+
                                 <!--<Label Text="{Binding Cbox}"
                                 Grid.Column="2" Grid.Row="0"
                                 HorizontalOptions="End"
                                 VerticalOptions="Center"/>-->
 
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
-            <Label Text="検索ワード" x:Name="Searchword"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

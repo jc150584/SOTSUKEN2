@@ -12,7 +12,7 @@ namespace FoodStock01
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecipePage : ContentPage
     {
-        public RecipePage(string title)
+        public RecipePage(string title, string food)
         {
             //タイトル
             Title = title;
@@ -28,7 +28,7 @@ namespace FoodStock01
 
             var recipeView = new WebView
             {
-                Source = "http://cookpad.com/"
+                Source = "http://cookpad.com/search/" + food
             };
             /*Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);*/
             Content = recipeView;

@@ -22,7 +22,7 @@ namespace FoodStock01
                    new EntryPage1("登録"),
                    new MemoPage1("メモ"),
                    new SettingPage("設定"),
-                   new RecipePage("レシピ")
+                   new RecipePage("レシピ","")
                 }
             };
         }

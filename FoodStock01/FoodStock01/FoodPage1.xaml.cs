@@ -39,5 +39,10 @@ namespace FoodStock01
                
             }
         }
+
+        void OnSearch_Clicked(object sender, EventArgs args)
+        {
+            RecipePage = new RecipePage("レシピ","にんじん");
+        }
     }
 }
