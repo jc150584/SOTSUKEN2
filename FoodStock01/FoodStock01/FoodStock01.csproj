@@ -48,6 +48,7 @@
       <DependentUpon>FoodPage1.xaml</DependentUpon>
     </Compile>
     <Compile Include="FoodPageViewModel.cs" />
+    <Compile Include="FoodTabViewModel.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -90,9 +91,6 @@
     </Reference>
     <Reference Include="Plugin.Media.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugin.Media.3.0.1\lib\netstandard1.0\Plugin.Media.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="PresentationCore">
-      <HintPath>C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing">
       <HintPath>C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Drawing.dll</HintPath>

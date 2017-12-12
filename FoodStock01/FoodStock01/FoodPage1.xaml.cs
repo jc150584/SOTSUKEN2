@@ -48,7 +48,7 @@ namespace FoodStock01
             };
             Content = Recipe;*/
 
-            Application.Current.MainPage = new RecipePage("レシピ");
+            //Application.Current.MainPage = new RecipePage("レシピ");
         }
     }
 }
