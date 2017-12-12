@@ -22,12 +22,17 @@ namespace FoodStock01
 
             InitializeComponent();
 
+            label1 = new Label();
+            label1.Text = "レシピ";
+            label1.Margin = new Thickness(20,30,20,10);
+
+
             var webView = new WebView
             {
                 Source = "http://cookpad.com/"
             };
             Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
-            Content = webView;
+            Content = (label1, webView);
         }
     }
 }
