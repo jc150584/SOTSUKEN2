@@ -22,7 +22,7 @@ namespace FoodStock01
 
             InitializeComponent();
 
-            label1 = new Label();
+            Label label1 = new Label();
             label1.Text = "レシピ";
             label1.Margin = new Thickness(20,30,20,10);
 
