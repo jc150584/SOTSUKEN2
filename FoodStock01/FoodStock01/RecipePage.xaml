@@ -2,11 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FoodStock01.RecipePage">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                0, 20, 0, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="20,30,20,10">
+            <Label Text="レシピ"
+                   TextColor="DodgerBlue"
+                   BackgroundColor="Transparent"/>
+            <WebView Source="http://cookpad.com/" 
+                     Scale="YES"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
