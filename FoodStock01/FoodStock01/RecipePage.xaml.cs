@@ -26,10 +26,12 @@ namespace FoodStock01
              label1.Text = "レシピ";
              label1.Margin = new Thickness(20,30,20,10);*/
 
-            recipeView.Source = "http://cookpad.com/";
-
-            /*Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
-            Content = new {label1, webView};*/
+            var recipeView = new WebView
+            {
+                Source = "http://cookpad.com/"
+            };
+            /*Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);*/
+            Content = recipeView;
         }
     }
 }

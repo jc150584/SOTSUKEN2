@@ -17,7 +17,7 @@
                    TextColor="DodgerBlue"
                    BackgroundColor="Transparent"/>
             
-            <WebView x:Name="recipeView" />
+            <!--<WebView x:Name="recipeView" />-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
