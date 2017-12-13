@@ -23,8 +23,26 @@
         <StackLayout VerticalOptions="Start"
                      Margin="20, 30, 20, 10">
 
-            <Label Text="食材リスト" TextColor="DodgerBlue"
-                   BackgroundColor="Transparent" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+            
+                <Label Text="食材リスト" FontSize="Large"
+                       BackgroundColor="Transparent" 
+                       Grid.Column="0" Grid.Row="0"/>
+
+                <StackLayout  Grid.Column="1" Grid.Row="0">
+                    <Button Image="search24.png"
+                        Text="レシピ検索"
+                        HorizontalOptions="End"
+                        Clicked="OnSearch_Clicked"/>
+                </StackLayout>
+            </Grid>
 
             <Grid Padding="10,20,10,20">
                 <Grid.RowDefinitions>

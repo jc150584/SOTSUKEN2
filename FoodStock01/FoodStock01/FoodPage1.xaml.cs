@@ -13,6 +13,7 @@ namespace FoodStock01
     public partial class FoodPage1 : ContentPage
     {
         ObservableCollection<ButtonAndString> myAL;
+        String s = "http://cookpad.com/search/";
 
         public FoodPage1(string title)
         {
@@ -50,9 +51,9 @@ namespace FoodStock01
         {
             //myAL.Add(new ButtonAndString { B = (Button)sender, S = ((Button)sender).Text});
 
-            String s = "http://cookpad.com/search/";
-
             s += ((Button)sender).Text + "　";
+            DisplayAlert("URL", s, "ok");
+
             //myALの中に入ってたらボタンのテキストをアラート表示
             /* foreach (ButtonAndString bas in myAL)
              {
@@ -63,7 +64,6 @@ namespace FoodStock01
                  }*/
             //DisplayAlert("ButtonAndString", s, "ok");
             // }
-            DisplayAlert("URL", s, "ok");
             /* var Recipe = new WebView
              {
                  Source = s
@@ -77,15 +77,15 @@ namespace FoodStock01
             public String S { set; get; }
         }
 
-        /*void OnSearch_Clicked(object sender, EventArgs args)
+        void OnSearch_Clicked(object sender, EventArgs args)
         {
             var Recipe = new WebView
             {
-                Source = "http://cookpad.com/search/"
+                Source = s
             };
             Content = Recipe;
 
-            Application.Current.MainPage = new RecipePage("レシピ");
-        }*/
+            //Application.Current.MainPage = new RecipePage("レシピ");
+        }
     }
 }
