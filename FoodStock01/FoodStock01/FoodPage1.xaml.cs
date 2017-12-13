@@ -81,7 +81,7 @@ namespace FoodStock01
         {
             var Recipe = new WebView
             {
-                Source = "\"" +s+ "\""
+                Source = "http://cookpad.com/search/"
             };
             Content = Recipe;
 
