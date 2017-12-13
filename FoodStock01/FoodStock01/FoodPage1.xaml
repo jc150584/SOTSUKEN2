@@ -24,7 +24,11 @@
                      Margin="20, 30, 20, 10">
 
             <Label Text="食材リスト" TextColor="DodgerBlue"
-                       BackgroundColor="Transparent" />
+                   BackgroundColor="Transparent" />
+
+            <Button Text="sample"
+                    x:Name="b1"
+                    Clicked="OnButtonClicked"/>
 
             <Grid Padding="10,20,10,20">
                 <Grid.RowDefinitions>
@@ -87,18 +91,15 @@
 
                                 <Button Text="レシピ検索" 
                                         Grid.Column="2" Grid.Row="0" 
-                                        Clicked="OnSearch_Clicked"/>
-                                    <!--Clicked="OnSearch_Clicked"-->
+                                        Clicked="OnButtonClicked"
+                                        x:Name="SB"/>
+
                                 <!--<toolkit:CheckBox CheckedChanged="ChackBoxChanged" 
                                                   Grid.Column="2" Grid.Row="0"
                                                   HorizontalOptions="End"
-                                                  VerticalOptions="Center"/>-->
-
-                                <!--<Label Text="{Binding Cbox}"
-                                Grid.Column="2" Grid.Row="0"
-                                HorizontalOptions="End"
-                                VerticalOptions="Center"/>-->
-
+                                                  VerticalOptions="Center"
+                                                  Text="{Binding Name}"
+                                                  x:Name="CB"/>-->
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
