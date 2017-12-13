@@ -44,6 +44,7 @@ namespace FoodStock01
             else
             {
                 s = s.Replace(((CheckBox)sender).Text, "");
+                DisplayAlert("URL", s, "ok");
             }
         }
 
@@ -61,11 +62,8 @@ namespace FoodStock01
 
         void OnSearch_Clicked(object sender, EventArgs args)
         {
-            var Recipe = new WebView
-            {
-               Source = new Uri(s)
-            };
-            Content = Recipe;
+            //ページ遷移
+            Navigation.PushAsync(new NextPage(s));
 
             //Application.Current.MainPage = new RecipePage("レシピ");
         }
