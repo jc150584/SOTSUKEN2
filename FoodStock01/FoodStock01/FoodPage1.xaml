@@ -26,10 +26,6 @@
             <Label Text="食材リスト" TextColor="DodgerBlue"
                    BackgroundColor="Transparent" />
 
-            <Button Text="sample"
-                    x:Name="b1"
-                    Clicked="OnButtonClicked"/>
-
             <Grid Padding="10,20,10,20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -97,8 +93,7 @@
                                                   Grid.Column="2" Grid.Row="0"
                                                   HorizontalOptions="End"
                                                   VerticalOptions="Center"
-                                                  Text="{Binding Name}"
-                                                  x:Name="CB"/>-->
+                                                  Text="{Binding Name}"/>-->
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

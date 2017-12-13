@@ -26,11 +26,8 @@ namespace FoodStock01
 
             InitializeComponent();
 
-            myAL =
-               new ObservableCollection<ButtonAndString>();
-
-            //ボタンのテキストをadd
-            myAL.Add(new ButtonAndString { B = b1, S = b1.Text });
+           /* myAL =
+               new ObservableCollection<ButtonAndString>();*/
 
         }
 
@@ -51,20 +48,22 @@ namespace FoodStock01
 
         void OnButtonClicked(object sender, EventArgs e)
         {
-            myAL.Add(new ButtonAndString { B = (Button)sender, S = ((Button)sender).Text});
+            //myAL.Add(new ButtonAndString { B = (Button)sender, S = ((Button)sender).Text});
 
-            String s = "見つからないよ";
+            String s = "http://cookpad.com/search/";
+
+            s += ((Button)sender).Text + "　";
             //myALの中に入ってたらボタンのテキストをアラート表示
-            foreach (ButtonAndString bas in myAL)
-            {
-                if ((Button)sender == (bas.B))
-                {
-                    s = "http://cookpad.com/search/" + bas.S;
-                    break;
-                }
-                //DisplayAlert("ButtonAndString", s, "ok");
-            }
-            DisplayAlert("ButtonAndString", s, "ok");
+            /* foreach (ButtonAndString bas in myAL)
+             {
+                 if ((Button)sender == (bas.B))
+                 {
+                     s = "http://cookpad.com/search/" + bas.S;
+                     break;
+                 }*/
+            //DisplayAlert("ButtonAndString", s, "ok");
+            // }
+            DisplayAlert("URL", s, "ok");
             /* var Recipe = new WebView
              {
                  Source = s
