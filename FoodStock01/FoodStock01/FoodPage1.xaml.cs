@@ -59,7 +59,7 @@ namespace FoodStock01
             {
                 if ((Button)sender == (bas.B))
                 {
-                    s = bas.S;
+                    s = "http://cookpad.com/search/" + bas.S;
                     break;
                 }
                 //DisplayAlert("ButtonAndString", s, "ok");
@@ -67,7 +67,7 @@ namespace FoodStock01
             DisplayAlert("ButtonAndString", s, "ok");
             /* var Recipe = new WebView
              {
-                 Source = "http://cookpad.com/search/" + s
+                 Source = s
              };
              Content = Recipe;*/
         }
