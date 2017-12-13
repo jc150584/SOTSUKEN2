@@ -12,7 +12,7 @@ namespace FoodStock01
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FoodPage1 : ContentPage
     {
-        ObservableCollection<ButtonAndString> myAL;
+        //ObservableCollection<ButtonAndString> myAL;
         String s = "http://cookpad.com/search/";
 
         public FoodPage1(string title)
@@ -32,43 +32,25 @@ namespace FoodStock01
 
         }
 
-        /*void ChackBoxChanged(object sender, bool isChecked)
+        void ChackBoxChanged(object sender, bool isChecked)
         {
             //選択された時の処理
             if (isChecked)
-            { 
-
-       
+            {
+                s += ((CheckBox)sender).Text + "　";
+                DisplayAlert("URL", s, "ok");
             }
             //選択が外された時の処理
             else
             {
-               
+                s = s.Replace(((CheckBox)sender).Text, "");
             }
-        }*/
+        }
 
         void OnButtonClicked(object sender, EventArgs e)
         {
-            //myAL.Add(new ButtonAndString { B = (Button)sender, S = ((Button)sender).Text});
-
             s += ((Button)sender).Text + "　";
             DisplayAlert("URL", s, "ok");
-
-            //myALの中に入ってたらボタンのテキストをアラート表示
-            /* foreach (ButtonAndString bas in myAL)
-             {
-                 if ((Button)sender == (bas.B))
-                 {
-                     s = "http://cookpad.com/search/" + bas.S;
-                     break;
-                 }*/
-            //DisplayAlert("ButtonAndString", s, "ok");
-            // }
-            /* var Recipe = new WebView
-             {
-                 Source = s
-             };
-             Content = Recipe;*/
         }
 
         public class ButtonAndString
