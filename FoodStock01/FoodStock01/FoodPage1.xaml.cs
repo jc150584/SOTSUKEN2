@@ -64,11 +64,12 @@ namespace FoodStock01
                 }
                 //DisplayAlert("ButtonAndString", s, "ok");
             }
-            var Recipe = new WebView
-            {
-                Source = "http://cookpad.com/search/" + s
-            };
-            Content = Recipe;
+            DisplayAlert("ButtonAndString", s, "ok");
+            /* var Recipe = new WebView
+             {
+                 Source = "http://cookpad.com/search/" + s
+             };
+             Content = Recipe;*/
         }
 
         public class ButtonAndString
