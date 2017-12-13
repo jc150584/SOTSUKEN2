@@ -6,22 +6,14 @@
              xmlns:toolkit="clr-namespace:FoodStock01;assembly=FoodStock01"
              x:Name="FoodPage"
              x:Class="FoodStock01.FoodPage1">
-    
+
     <ContentPage.BindingContext>
         <local:FoodPageViewModel />
     </ContentPage.BindingContext>
-
-    <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness">
-            <OnPlatform.iOS>
-                0, 20, 0, 0
-            </OnPlatform.iOS>
-        </OnPlatform>
-    </ContentPage.Padding>
-
+    
     <ContentPage.Content>
         <StackLayout VerticalOptions="Start"
-                     Margin="20, 30, 20, 10">
+                     Margin="20, 10, 20, 10">
 
             <Button Image="search24.png"
                     Text="レシピ検索"
