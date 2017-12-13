@@ -29,7 +29,9 @@ namespace FoodStock01
             myAL =
                new ObservableCollection<ButtonAndString>();
 
+            //ボタンのテキストをadd
             myAL.Add(new ButtonAndString { B = b1, S = b1.Text });
+
         }
 
         /*void ChackBoxChanged(object sender, bool isChecked)
@@ -49,8 +51,10 @@ namespace FoodStock01
 
         void OnButtonClicked(object sender, EventArgs e)
         {
+            myAL.Add(new ButtonAndString { B = (Button)sender, S = ((Button)sender).Text});
 
             String s = "見つからないよ";
+            //myALの中に入ってたらボタンのテキストをアラート表示
             foreach (ButtonAndString bas in myAL)
             {
                 if ((Button)sender == (bas.B))

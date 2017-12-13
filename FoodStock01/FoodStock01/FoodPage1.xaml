@@ -89,10 +89,9 @@
                                        VerticalOptions="End"/>
                                 </Grid>
 
-                                <Button Text="レシピ検索" 
+                                <Button Text="{Binding Name}" 
                                         Grid.Column="2" Grid.Row="0" 
-                                        Clicked="OnButtonClicked"
-                                        x:Name="SB"/>
+                                        Clicked="OnButtonClicked"/>
 
                                 <!--<toolkit:CheckBox CheckedChanged="ChackBoxChanged" 
                                                   Grid.Column="2" Grid.Row="0"
