@@ -12,12 +12,12 @@
     </ContentPage.Padding>
 
     <ContentPage.Content>
-        <StackLayout Margin="20,30,20,10">
+        <!--<StackLayout Margin="20,30,20,10">
             <Label Text="レシピ"
                    TextColor="DodgerBlue"
                    BackgroundColor="Transparent"/>
-            
-            <!--<WebView x:Name="recipeView" />-->
-        </StackLayout>
+
+            <WebView x:Name="recipeView" />
+        </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>

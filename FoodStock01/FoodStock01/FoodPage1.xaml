@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+    
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FoodStock01;assembly=FoodStock01"
@@ -21,28 +22,9 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Start"
                      Margin="20, 30, 20, 10">
-            <!--<Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>-->
 
             <Label Text="食材リスト" TextColor="DodgerBlue"
                        BackgroundColor="Transparent" />
-            <!--.Column="0" Grid.Row="0"--> 
-                <!--<StackLayout Grid.Column="1" Grid.Row="0"
-                             HorizontalOptions="End"
-                             VerticalOptions="Center">
-                    <Label Text="レシピ検索" FontSize="14" TextColor="DodgerBlue"/>
-                    <Button Image="search24.png"
-                            x:Name="search"
-                            Clicked="Search_Clicked"/>
-
-                </StackLayout>-->
-           <!-- </Grid>-->
 
             <Grid Padding="10,20,10,20">
                 <Grid.RowDefinitions>
@@ -104,9 +86,8 @@
                                 </Grid>
 
                                 <Button Text="レシピ検索" 
-                                        Command="{Binding GoToRecipe}"
-                                        CommandParameter="{x:Reference FoodPage}"
-                                        Grid.Column="2" Grid.Row="0" />
+                                        Grid.Column="2" Grid.Row="0" 
+                                        Clicked="OnSearch_Clicked"/>
                                     <!--Clicked="OnSearch_Clicked"-->
                                 <!--<toolkit:CheckBox CheckedChanged="ChackBoxChanged" 
                                                   Grid.Column="2" Grid.Row="0"
