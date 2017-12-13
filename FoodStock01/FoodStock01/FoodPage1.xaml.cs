@@ -81,10 +81,7 @@ namespace FoodStock01
         {
             var Recipe = new WebView
             {
-                Source = new UrlWebViewSource
-                {
-                    Url = s,
-                },
+               Source = new Uri(s)
             };
             Content = Recipe;
 
