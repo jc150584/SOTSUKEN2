@@ -60,6 +60,7 @@ namespace FoodStock01
                 if ((Button)sender == (bas.B))
                 {
                     s = bas.S;
+                    break;
                 }
                 //DisplayAlert("ButtonAndString", s, "ok");
             }
