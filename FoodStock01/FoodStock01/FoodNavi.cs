@@ -7,12 +7,12 @@ using Xamarin.Forms;
 
 namespace FoodStock01
 {
-    public class FoodNavi : NavigationPage
+    public partial class FoodNavi : NavigationPage
     {
-        public FoodNavi()
+        public FoodNavi(Page page) : base(page)
         {
-            Title = "食材リスト";
-            new FoodPage1("食材");
+            Title = "食材";
+            Icon = "apple32.png";
         }
     }
 }
