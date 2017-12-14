@@ -5,7 +5,7 @@
              x:Class="FoodStock01.StockPage1">
 
     <ContentPage.BindingContext>
-        <local: StockPageViewModel/>
+        <local:StockPageViewModel />
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
