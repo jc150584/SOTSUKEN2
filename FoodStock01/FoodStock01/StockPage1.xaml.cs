@@ -19,5 +19,19 @@ namespace FoodStock01
 
             InitializeComponent ();
 		}
-	}
+
+        //プラスがクリックされた
+        void OnPuls_Clicked(object sender, EventArgs args)
+        {
+            int num = Convert.ToInt32(((Button)sender).Text) + 1;
+            DisplayAlert("UPDATE文書いてね", num.ToString(), "ok");
+        }
+
+        //マイナスがクリックされた
+        void OnMinus_Clicked(object sender, EventArgs args)
+        {
+            int num = Convert.ToInt32(((Button)sender).Text) - 1;
+            DisplayAlert("UPDATE文書いてね", num.ToString(), "ok");
+        }
+    }
 }

@@ -55,6 +55,7 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
                                     <Label Text="{Binding Count}" 
                                        Grid.Column="0" Grid.Row="0"
@@ -64,6 +65,13 @@
                                        Grid.Column="1" Grid.Row="0"
                                        HorizontalOptions="Start"
                                        VerticalOptions="End"/>
+                                    <StackLayout Grid.Column="2" Grid.Row="0" >
+                                        <Button Text="{Binding Count}"
+                                                Clicked="OnPlus_Clicked"/>
+                                        <Button Text="{Binding Count}"
+                                                Clicked="OnMinus_Clicked" />
+                                    </StackLayout>
+                                                 
                                 </Grid>
                             </Grid>
                         </ViewCell>
