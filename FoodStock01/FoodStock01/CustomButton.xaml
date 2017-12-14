@@ -4,7 +4,7 @@
              x:Class="FoodStock01.CustomButton">
     
     <StackLayout Orientation="Horizontal">
-        <Label x:Name="buttomImage" Text="+" />
+        <Label x:Name="buttomImage" Text="+" TextColor="DodgerBlue" />
         <Label x:Name="textNameLabel" IsVisible="False"/>
         <Label x:Name="textCountLabel" IsVisible="False"/>
     </StackLayout>
