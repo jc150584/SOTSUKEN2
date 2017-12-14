@@ -18,10 +18,10 @@ namespace FoodStock01
             {
                 Children = {
                    new FoodNavi(new FoodPage1("食材リスト")),
-                   new StockPage("保存"),
-                   new EntryPage1("登録"),
-                   new MemoPage1("メモ"),
-                   new SettingPage("設定"),
+                   new StockNavi(new StockPage("保存食品リスト")),
+                   new EntryNavi(new EntryPage1("登録")),
+                   new MemoNavi(new MemoPage1("メモ")),
+                   new SettingNavi(new SettingPage("設定")),
                    //new RecipePage("レシピ")
                 }
             };

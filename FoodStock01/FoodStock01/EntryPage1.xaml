@@ -28,9 +28,7 @@
     <ContentPage.Content>
 
         <StackLayout VerticalOptions="Start"
-                     Margin="20, 30, 20, 10">
-            <Label Text="登録" TextColor="DodgerBlue"
-                   BackgroundColor="Transparent"/>
+                     Margin="20, 10, 20, 10">
             <ScrollView>
                 <StackLayout>
                     <Grid Margin="0, 0, 0, 10">

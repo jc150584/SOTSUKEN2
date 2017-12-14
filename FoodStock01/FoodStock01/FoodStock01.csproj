@@ -41,6 +41,7 @@
     <Compile Include="CheckBox.xaml.cs">
       <DependentUpon>CheckBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EntryNavi.cs" />
     <Compile Include="EntryPage1.xaml.cs">
       <DependentUpon>EntryPage1.xaml</DependentUpon>
     </Compile>
@@ -52,6 +53,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MemoNavi.cs" />
     <Compile Include="MemoPage.cs" />
     <Compile Include="MemoPage1.xaml.cs">
       <DependentUpon>MemoPage1.xaml</DependentUpon>
@@ -66,7 +68,9 @@
     <Compile Include="SearchWebView.xaml.cs">
       <DependentUpon>SearchWebView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SettingNavi.cs" />
     <Compile Include="SettingPage.cs" />
+    <Compile Include="StockNavi.cs" />
     <Compile Include="StockPage.cs" />
     <Compile Include="StockPage1.xaml.cs">
       <DependentUpon>StockPage1.xaml</DependentUpon>
