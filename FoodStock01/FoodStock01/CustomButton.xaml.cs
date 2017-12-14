@@ -73,5 +73,11 @@ namespace FoodStock01
             set { SetValue(IsCheckedProperty, value); }
             get { return (string)GetValue(IsCheckedProperty); }
         }
+
+        //TapGestureRecognizerハンドラー
+        void OnButtonTapped(object sender, EventArgs args)
+        {
+            IsChecked = IsChecked;
+        }
     }
 }

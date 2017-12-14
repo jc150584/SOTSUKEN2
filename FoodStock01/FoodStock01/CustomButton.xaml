@@ -8,8 +8,8 @@
         <Label x:Name="textNameLabel" IsVisible="False"/>
         <Label x:Name="textCountLabel" IsVisible="False"/>
     </StackLayout>
-    
-    <!--<ContentView.GestureRecognizers>
+
+    <ContentView.GestureRecognizers>
         <TapGestureRecognizer Tapped="OnButtonTapped" />
-    </ContentView.GestureRecognizers>-->
+    </ContentView.GestureRecognizers>
 </ContentView>
