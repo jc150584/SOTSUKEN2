@@ -1,10 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FoodStock01.CustomButton">
-
+             x:Class="FoodStock01.CustomButtonMinus">
     <StackLayout Orientation="Horizontal">
-        <Label x:Name="buttomImage" Text="+" TextColor="DodgerBlue" FontSize="Large"/>
+        <Label x:Name="buttomImage" Text="-" TextColor="DodgerBlue" FontSize="Large"/>
         <Label x:Name="textNameLabel" IsVisible="False"/>
         <Label x:Name="textCountLabel" IsVisible="False"/>
     </StackLayout>

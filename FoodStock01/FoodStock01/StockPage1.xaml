@@ -70,8 +70,9 @@
                                         <toolkit:CustomButton CheckedChanged = "OnPlus_Clicked"
                                                               NameText ="{Binding Name}"
                                                               CountText ="{Binding Count}"/>
-                                        <Button Text="{Binding Count}"
-                                                Clicked="OnMinus_Clicked" />
+                                        <toolkit:CustomButtonMinus CheckedChanged = "OnMinus_Clicked"
+                                                                   NameText ="{Binding Name}"
+                                                                   CountText ="{Binding Count}"/>
                                     </StackLayout>
                                                  
                                 </Grid>

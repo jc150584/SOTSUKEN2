@@ -44,6 +44,9 @@
     <Compile Include="CustomButton.xaml.cs">
       <DependentUpon>CustomButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomButtonMinus.xaml.cs">
+      <DependentUpon>CustomButtonMinus.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EntryNavi.cs" />
     <Compile Include="EntryPage1.xaml.cs">
       <DependentUpon>EntryPage1.xaml</DependentUpon>
@@ -170,6 +173,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CustomButton.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomButtonMinus.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
