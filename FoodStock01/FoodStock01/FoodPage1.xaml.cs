@@ -33,7 +33,7 @@ namespace FoodStock01
             //選択が外された時の処理
             else
             {
-                s = s.Replace(((CheckBox)sender).Text, "");
+                s = s.Replace(((CheckBox)sender).Text +"　", "");
                 //DisplayAlert("URL", s, "ok");
             }
         }

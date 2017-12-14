@@ -5,7 +5,7 @@
 
     <StackLayout Orientation="Horizontal">
         <Label x:Name="boxLabel" Text="&#x2610;" />
-        <Label x:Name="textLabel" />
+        <Label x:Name="textLabel" IsEnabled="False"/>
     </StackLayout>
 
     <ContentView.GestureRecognizers>
