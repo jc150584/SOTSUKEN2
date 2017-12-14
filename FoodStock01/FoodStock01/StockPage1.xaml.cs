@@ -21,7 +21,7 @@ namespace FoodStock01
 		}
 
         //プラスがクリックされた
-        void OnPuls_Clicked(object sender, EventArgs args)
+        void OnPlus_Clicked(object sender, EventArgs args)
         {
             int num = Convert.ToInt32(((Button)sender).Text) + 1;
             DisplayAlert("UPDATE文書いてね", num.ToString(), "ok");
