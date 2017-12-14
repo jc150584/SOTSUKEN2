@@ -1,25 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FoodStock01;assembly=FoodStock01"
              x:Class="FoodStock01.StockPage1">
+
+    <ContentPage.BindingContext>
+        <local: StockPageViewModel/>
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Spacing="0">
-                <BoxView Color="Blue"
-                     WidthRequest="100"
-                     HeightRequest="500"
-                     />
+        <StackLayout VerticalOptions="Start"
+                     Margin="20, 10, 20, 10">
 
-                <BoxView Color="Yellow"
-                     WidthRequest="100"
-                     HeightRequest="500"
-                     />
+            <Button Image="search24.png"
+                    Text="レシピ検索"
+                    HorizontalOptions="End"
+                    Clicked="OnSearch_Clicked"/>
 
-                <BoxView Color="Red"
-                     WidthRequest="100"
-                     HeightRequest="500"
-                     />
-            </StackLayout>
-        </ScrollView>
+            <Grid Padding="10,20,10,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="食材名" 
+                       BackgroundColor="Transparent"
+                       Grid.Column="0" Grid.Row="0"/>
+                <Label Text="数量" 
+                       BackgroundColor="Transparent"
+                       Grid.Column="1" Grid.Row="0"/>
+
+            </Grid>
+
+            <ListView HasUnevenRows="true"
+                  ItemsSource="{Binding Stocks}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10,20,10,20">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Name}" 
+                                   Grid.Column="0" Grid.Row="0"
+                                   FontSize="Large"/>
+                                <Grid Grid.Column="1" Grid.Row="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Count}" 
+                                       Grid.Column="0" Grid.Row="0"
+                                       HorizontalOptions="End"
+                                       FontSize="Large"/>
+                                    <Label Text="{Binding Unit}" 
+                                       Grid.Column="1" Grid.Row="0"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="End"/>
+                                </Grid>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
