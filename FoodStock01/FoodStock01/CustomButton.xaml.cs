@@ -37,16 +37,19 @@ namespace FoodStock01
         public static readonly BindableProperty IsCheckedProperty =
            BindableProperty.Create(
                "IsChecked",
-               typeof(string),
+               typeof(bool),
                typeof(CustomButton),
-               null,
+               false,
                propertyChanged: (bindable, oldValue, newValue) =>
                {
                    CustomButton button = (CustomButton)bindable;
-                   ((CustomButton)bindable).buttomImage.Text = (string)newValue;
 
                    //イベント発行
-                   button.CheckedChanged?.Invoke(button, true);
+                   EventHandler<bool> eventHandler = button.CheckedChanged;
+                   if (eventHandler != null)
+                   {
+                       eventHandler(button, (bool)newValue);
+                   }
                });
 
         public event EventHandler<bool> CheckedChanged;
@@ -68,16 +71,16 @@ namespace FoodStock01
             get { return (string)GetValue(CountTextProperty); }
         }
 
-        public string IsChecked
+        public bool IsChecked
         {
             set { SetValue(IsCheckedProperty, value); }
-            get { return (string)GetValue(IsCheckedProperty); }
+            get { return (bool)GetValue(IsCheckedProperty); }
         }
 
         //TapGestureRecognizerハンドラー
         void OnButtonTapped(object sender, EventArgs args)
         {
-            IsChecked = IsChecked;
+            IsChecked = !IsChecked;
         }
     }
 }

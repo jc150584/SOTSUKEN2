@@ -31,9 +31,8 @@ namespace FoodStock01
         //マイナスがクリックされた
         void OnMinus_Clicked(object sender, EventArgs args)
         {
-            int num = Convert.ToInt32(((CustomButton)sender).CountText) - 1;
-            string name = ((CustomButton)sender).NameText;
-            DisplayAlert("1引きました", name +"　"+num.ToString(), "ok");
+            int num = Convert.ToInt32(((Button)sender).Text) - 1;
+            DisplayAlert("UPDATE文書いてね", num.ToString(), "ok");
         }
     }
 }
