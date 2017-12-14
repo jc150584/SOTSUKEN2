@@ -69,9 +69,12 @@
                                     <StackLayout Grid.Column="2" Grid.Row="0" >
                                         <toolkit:CustomButton CheckedChanged = "OnPlus_Clicked"
                                                               NameText ="{Binding Name}"
-                                                              CountText ="{Binding Count}"/>
-                                        <Button Text="{Binding Count}"
-                                                Clicked="OnMinus_Clicked" />
+                                                              CountText ="{Binding Count}"
+                                                              IsChecked = "+" />
+                                        <toolkit:CustomButton CheckedChanged = "OnMinus_Clicked"
+                                                              NameText ="{Binding Name}"
+                                                              CountText ="{Binding Count}"
+                                                              IsChecked ="-"/>
                                     </StackLayout>
                                                  
                                 </Grid>

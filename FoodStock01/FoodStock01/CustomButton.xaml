@@ -4,12 +4,12 @@
              x:Class="FoodStock01.CustomButton">
     
     <StackLayout Orientation="Horizontal">
-        <Label x:Name="buttomImage" Text="+" TextColor="DodgerBlue" />
+        <Label x:Name="buttomImage" TextColor="DodgerBlue" FontSize="Large" />
         <Label x:Name="textNameLabel" IsVisible="False"/>
         <Label x:Name="textCountLabel" IsVisible="False"/>
     </StackLayout>
     
-    <ContentView.GestureRecognizers>
+    <!--<ContentView.GestureRecognizers>
         <TapGestureRecognizer Tapped="OnButtonTapped" />
-    </ContentView.GestureRecognizers>
+    </ContentView.GestureRecognizers>-->
 </ContentView>
