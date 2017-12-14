@@ -20,7 +20,8 @@ namespace FoodStock01
 
             var Recipe = new WebView
             {
-                Source = new Uri(url)
+                Source = new Uri(url),
+                HorizontalOptions = LayoutOptions.FillAndExpand,      
             };
             Content = Recipe;
         }
