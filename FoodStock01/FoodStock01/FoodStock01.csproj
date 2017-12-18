@@ -51,6 +51,7 @@
     <Compile Include="EntryPage1.xaml.cs">
       <DependentUpon>EntryPage1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FoodModel.cs" />
     <Compile Include="FoodNavi.cs" />
     <Compile Include="FoodPage1.xaml.cs">
       <DependentUpon>FoodPage1.xaml</DependentUpon>

@@ -22,38 +22,42 @@ namespace FoodStock01
             InitializeComponent();
         }
 
+        /***試し***/
+        /*public FoodPage1(int insert)
+        {
+            if(insert == 1)
+            {
+                InitializeComponent();
+            }
+        }*/
+        /***試し***/
+
         void ChackBoxChanged(object sender, bool isChecked)
         {
             //選択された時の処理
             if (isChecked)
             {
                 s += ((CheckBox)sender).Text + "　";
-                //DisplayAlert("URL", s, "ok");
             }
             //選択が外された時の処理
             else
             {
-                s = s.Replace(((CheckBox)sender).Text +"　", "");
-                //DisplayAlert("URL", s, "ok");
+                s = s.Replace(((CheckBox)sender).Text + "　", "");
             }
         }
-
-        /*void OnButtonClicked(object sender, EventArgs e)
-        {
-            s += ((Button)sender).Text + "　";
-            DisplayAlert("URL", s, "ok");
-        }
-
-        public class ButtonAndString
-        {
-            public Button B { set; get; }
-            public String S { set; get; }
-        }*/
 
         void OnSearch_Clicked(object sender, EventArgs args)
         {
             //ページ遷移
             Navigation.PushAsync(new NextPage(s));
+        }
+
+        private void Update_Button_Clicked(object sender, EventArgs e)
+        {
+            Title = "食材";
+
+            InitializeComponent();
+
         }
     }
 }

@@ -16,7 +16,7 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <OnPlatform.iOS>
@@ -32,42 +32,43 @@
             <ScrollView>
                 <StackLayout>
                     <Grid Margin="0, 0, 0, 10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                <Label Text="食材"
+                        <Label Text="食材"
                        HorizontalOptions="End" 
                        Grid.Column="0" Grid.Row="0" />
-                <Switch HorizontalOptions="Center"
+                        <Switch HorizontalOptions="Center"
                         Grid.Column="1" Grid.Row="0" 
                         Toggled="SelectSwitch"/>
-                <Label Text="保存食品"
+                        <Label Text="保存食品"
                        HorizontalOptions="Start" 
                        Grid.Column="2" Grid.Row="0" />
-                </Grid>
+                    </Grid>
 
-                <StackLayout     VerticalOptions="Center"
+                    <StackLayout     VerticalOptions="Center"
                              Margin="0, 0, 0, 10">
-                    <Label Text="食品名"/>
-                    <Entry Placeholder="【食品名】入力してください"
+                        <Label Text="食品名"/>
+                        <Entry Placeholder="【食品名】入力してください"
                             x:Name="NameEntry"
                             IsEnabled="True"/>
-                    <Label Text="※レシピの検索に使用します"
+                        <Label Text="※レシピの検索に使用します"
                             FontSize="14" />
-                </StackLayout>
+                    </StackLayout>
 
-                <StackLayout Margin="0, 0, 0, 10">
-                    <Label Text="消費期限・賞味期限（食材のみ）"/>
-                    <DatePicker Format="D"
+                    <StackLayout Margin="0, 0, 0, 10">
+                        <Label Text="消費期限・賞味期限（食材のみ）"/>
+                        <DatePicker Format="d"
                             x:Name="FoodPicker"
-                            IsEnabled="True"/>
-                </StackLayout>
+                            IsEnabled="True"
+                            DateSelected="FoodPicker_DateSelected" />
+                    </StackLayout>
 
                     <Grid>
                         <Grid.RowDefinitions>
@@ -111,12 +112,14 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Text="登録"
-                    Grid.Column="0" Grid.Row="0" 
-                    x:Name="Insert01"/>
+                    Grid.Column="0" Grid.Row="0"
+                    x:Name="Insert01"
+                    Clicked="Insert01_Clicked"/>
 
                 <Button Text="続けて登録"
                     Grid.Column="1" Grid.Row="0"
-                    x:Name="Insert02"/>
+                    x:Name="Insert02"
+                    Clicked="Insert02_Clicked"/>
             </Grid>
 
         </StackLayout>

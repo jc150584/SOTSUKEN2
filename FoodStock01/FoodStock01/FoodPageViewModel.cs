@@ -4,54 +4,60 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SQLite;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace FoodStock01
 {
     class FoodPageViewModel
     {
-        public ObservableCollection<Magic> Magics
+
+        public ObservableCollection<Food> Foods
         {
             get;
             private set;
         }
 
+
         public FoodPageViewModel()
         {
-            Magics = new ObservableCollection<Magic> {
-                new Magic{
-                    Name = "バナナ",
-                    Date = "4",
-                    Cbox = "\u2610"
-                },
-                new Magic{
-                    Name = "人参",
-                    Date = "5",
-                     Cbox = "\u2610"
-                },
-                new Magic{
-                    Name = "トマト",
-                    Date = "7",
-                    Cbox = "\u2610"
-                },
-                new Magic{
-                    Name = "ピーマン",
-                    Date = "3",
-                    Cbox = "\u2610"
-                },
-                new Magic{
-                    Name = "ほうれん草",
-                    Date = "3",
-                    Cbox = "\u2610"
-                },
-            };
+            if (FoodModel.SelectFood() != null)//
+            {
+                var query = FoodModel.SelectFood();
+
+                Foods = new ObservableCollection<Food>();
+                foreach (var food in query)
+                {
+                    Food f = new Food
+                    {
+                        F_name = food.F_name,
+                        F_result = food.F_result
+                    };
+                    Foods.Add(f);
+                }
+
+            }
+            else
+            {
+                Foods = new ObservableCollection<Food> {
+                    new Food {
+                       F_name = "NoData",
+                       //F_date = new DateTime(1970,1,1)
+                       F_result = 999
+                    }
+                };
+            }
         }
+
     }
 
-    public class Magic
+
+    public class Food
     {
-        public string Name { get; set; }
-        public string Date { get; set; }
-        public string Cbox { get; set; }
+        //public int F_no { get; set; }//余計かも
+        public string F_name { get; set; }
+        //public DateTime F_date { get; set; }
+        public int F_result { get; set; }
     }
-
 }

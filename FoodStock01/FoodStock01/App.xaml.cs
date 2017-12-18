@@ -10,13 +10,13 @@ namespace FoodStock01
 {
     public partial class App : Application
     {
-         //データベースのパスを格納
-        //public static string dbPath;
+        //データベースのパスを格納
+        public static string dbPath;
 
-        public App(/*string dbPath*/)
+        public App(string dbPath)
         {
             //AppのdbPathに引数のパスを設定
-            //App.dbPath = dbPath;
+            App.dbPath = dbPath;
 
             // TabbedPageをMainPageとしてセットする
             MainPage = new TabbedPage()
@@ -31,5 +31,6 @@ namespace FoodStock01
                 }
             };
         }
+
     }
 }
