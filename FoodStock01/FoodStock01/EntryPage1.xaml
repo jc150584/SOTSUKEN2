@@ -112,13 +112,11 @@
 
                 <Button Text="登録"
                     Grid.Column="0" Grid.Row="0" 
-                    x:Name="Insert01"
-                    Clicked="Insert01_Clicked"/>
+                    x:Name="Insert01"/>
 
                 <Button Text="続けて登録"
                     Grid.Column="1" Grid.Row="0"
-                    x:Name="Insert02"
-                    Clicked="Insert02_Clicked"/>
+                    x:Name="Insert02"/>
             </Grid>
 
         </StackLayout>

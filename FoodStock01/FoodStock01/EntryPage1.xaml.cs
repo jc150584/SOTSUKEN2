@@ -14,15 +14,15 @@ namespace FoodStock01
     public partial class EntryPage1 : ContentPage
     {
 
-        /***ここからフィールド***/
-        DateTime d; //フードピッカーの値を一時的に保持する
+       /***ここからフィールド***/
+        /*DateTime d; //フードピッカーの値を一時的に保持する
         TimeSpan s; //後で使うかも
 
         DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);//現在日付
 
         int result;
 
-        FoodPage1 page;
+        FoodPage1 page;*/
 
         /***ここまでフィールド***/
 
@@ -58,22 +58,22 @@ namespace FoodStock01
         }
 
         /***************「登録ボタン」が押された時*********************/
-        private void Insert01_Clicked(object sender, EventArgs e)
+       /* private void Insert01_Clicked(object sender, EventArgs e)
         {
             //Foodテーブルにインサートする
 
             FoodModel.InsertFood(1, NameEntry.Text, result);//
             DisplayAlert(NameEntry.Text, result.ToString(), "ok");
-        }
+        }*/
 
         /***************「すべて削除ボタン」が押された時********************/
-        private void Insert02_Clicked(object sender, EventArgs e)
+      /*  private void Insert02_Clicked(object sender, EventArgs e)
         {
             FoodModel.DeleteAllFood();
-        }
+        }*/
 
         /*************フードピッカーで日付を選択したとき******************/
-        private void FoodPicker_DateSelected(object sender, DateChangedEventArgs e)
+       /* private void FoodPicker_DateSelected(object sender, DateChangedEventArgs e)
         {
             //d = FoodPicker.Date;
             d = new DateTime(FoodPicker.Date.Year, FoodPicker.Date.Month, FoodPicker.Date.Day);
@@ -82,6 +82,6 @@ namespace FoodStock01
 
             result = s.Days;
 
-        }
+        }*/
     }
 }
