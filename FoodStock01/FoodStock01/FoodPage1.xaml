@@ -85,15 +85,11 @@
                                        HorizontalOptions="Start"
                                        VerticalOptions="End"/>
 
-                                    <!--<Button Text="{Binding Name}" 
-                                        Grid.Column="2" Grid.Row="0" 
-                                        Clicked="OnButtonClicked"/>-->
-
                                     <toolkit:CheckBox CheckedChanged="ChackBoxChanged" 
                                                   Grid.Column="2" Grid.Row="0"
                                                   HorizontalOptions="End"
                                                   VerticalOptions="Center"
-                                                  Text="{Binding Name}"/>
+                                                  Text="{Binding F_name}"/>
                                 </Grid>
                             </Grid>
                         </ViewCell>
