@@ -17,9 +17,17 @@
     </ResourceDictionary>
     </ContentPage.Resources>
 
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                0, 20, 0, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
     <ContentPage.Content>
-        <StackLayout Margin="20,10,20,10" VerticalOptions="CenterAndExpand">
-            <Grid Margin="0, 0, 0, 10">
+        <StackLayout Margin="20,10,20,30">
+            <Grid Margin="0, 0, 0, 10" VerticalOptions="Start">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
@@ -30,13 +38,13 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Text="通知日数"
-                    Grid.Column="0" Grid.Row="0"    
-                    HorizontalOptions="CenterAndExpand" />
+                    Grid.Column="0" Grid.Row="0"/>
 
                 <Picker
                     Grid.Column="1" Grid.Row="0" 
                     HorizontalOptions="End"
-                    WidthRequest="100">
+                    WidthRequest="100"
+                    Title="通知日数">
                     <Picker.Items>
                         <x:String>1</x:String>
                         <x:String>2</x:String>
@@ -53,7 +61,8 @@
                        HorizontalOptions="Start"/>
             </Grid>
 
-            <Button Text="保存" />
+            <Button Text="保存" 
+                    VerticalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
