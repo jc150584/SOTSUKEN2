@@ -12,6 +12,17 @@ namespace FoodStock01
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CustomButtonMinus : ContentView
     {
+        public static readonly BindableProperty NoTextProperty =
+           BindableProperty.Create(
+               "NoText",
+               typeof(string),
+               typeof(CustomButtonMinus),
+               null,
+               propertyChanged: (bindable, oldValue, newValue) =>
+               {
+                   ((CustomButtonMinus)bindable).textNoLabel.Text = (string)newValue;
+               });
+
         public static readonly BindableProperty NameTextProperty =
            BindableProperty.Create(
                "NameText",
@@ -32,6 +43,17 @@ namespace FoodStock01
               propertyChanged: (bindable, oldValue, newValue) =>
               {
                   ((CustomButtonMinus)bindable).textCountLabel.Text = (string)newValue;
+              });
+
+        public static readonly BindableProperty UnitTextProperty =
+          BindableProperty.Create(
+              "UnitText",
+              typeof(string),
+              typeof(CustomButtonMinus),
+              null,
+              propertyChanged: (bindable, oldValue, newValue) =>
+              {
+                  ((CustomButtonMinus)bindable).textUnitLabel.Text = (string)newValue;
               });
 
         public static readonly BindableProperty IsCheckedProperty =
@@ -59,6 +81,12 @@ namespace FoodStock01
             InitializeComponent();
         }
 
+        public string NoText
+        {
+            set { SetValue(NoTextProperty, value); }
+            get { return (string)GetValue(NoTextProperty); }
+        }
+
         public string NameText
         {
             set { SetValue(NameTextProperty, value); }
@@ -69,6 +97,12 @@ namespace FoodStock01
         {
             set { SetValue(CountTextProperty, value); }
             get { return (string)GetValue(CountTextProperty); }
+        }
+
+        public string UnitText
+        {
+            set { SetValue(UnitTextProperty, value); }
+            get { return (string)GetValue(UnitTextProperty); }
         }
 
         public bool IsChecked

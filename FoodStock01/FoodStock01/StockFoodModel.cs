@@ -113,7 +113,7 @@ namespace FoodStock01
                 try
                 {
                     //データベースに指定したSQLを発行
-                    return db.Query<StockFoodModel>("UPDATE [Stock] SET [S_num] = [S_num] + 1 WHERE [S_no] = 1");
+                    return db.Query<StockFoodModel>("UPDATE [Stock] SET [S_num] = [S_num] + 1 WHERE [S_no] = ");
 
                 }
                 catch (Exception e)
@@ -126,7 +126,7 @@ namespace FoodStock01
         }
 
         /********************アップデートメソッド02（プラス試し）**************************************/
-        public static void UpdateStockPlus02(int s_no)
+        public static void UpdateStockPlus02(int s_no, string s_name, int s_num, string s_unit)
         {
             //データベースに接続する
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
@@ -136,7 +136,8 @@ namespace FoodStock01
                     //データベースにFoodテーブルを作成する
                     db.CreateTable<StockFoodModel>();
 
-                    db.Delete<StockFoodModel>(s_no);//デリートで渡す値は主キーじゃないといけない説
+                    db.Update(new StockFoodModel() { S_no = s_no, S_name = s_name, S_num = s_num + 1, S_unit = s_unit });
+
                     db.Commit();
                 }
                 catch (Exception e)
@@ -148,21 +149,24 @@ namespace FoodStock01
         }
 
         /********************アップデートメソッド（マイナス）**************************************/
-        public static List<StockFoodModel> UpdateStockMinus(int s_no)
+        public static void UpdateStockMinus(int s_no, string s_name, int s_num, string s_unit)
         {
+            //データベースに接続する
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
                 try
                 {
-                    //データベースに指定したSQLを発行
-                    return db.Query<StockFoodModel>("UPDATE [Stock] SET [S_num] = [S_num] - 1 WHERE [S_no] = " + s_no);
+                    //データベースにFoodテーブルを作成する
+                    db.CreateTable<StockFoodModel>();
 
+                    db.Update(new StockFoodModel() { S_no = s_no, S_name = s_name, S_num = s_num - 1, S_unit = s_unit });
+
+                    db.Commit();
                 }
                 catch (Exception e)
                 {
-
+                    db.Rollback();
                     System.Diagnostics.Debug.WriteLine(e);
-                    return null;
                 }
             }
         }

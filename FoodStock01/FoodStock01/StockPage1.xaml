@@ -75,11 +75,15 @@
                                        VerticalOptions="End"/>
                                     <StackLayout Grid.Column="2" Grid.Row="0" >
                                         <toolkit:CustomButton CheckedChanged = "OnPlus_Clicked"
-                                                              NameText ="{Binding S_no}"
-                                                              CountText ="{Binding S_num}"/>
+                                                              NoText="{Binding S_no}"
+                                                              NameText ="{Binding S_name}"
+                                                              CountText ="{Binding S_num}"
+                                                              UnitText="{Binding S_unit}"/>
                                         <toolkit:CustomButtonMinus CheckedChanged = "OnMinus_Clicked"
-                                                                   NameText ="{Binding S_name}"
-                                                                   CountText ="{Binding S_num}"/>
+                                                              NoText="{Binding S_no}"
+                                                              NameText ="{Binding S_name}"
+                                                              CountText ="{Binding S_num}"
+                                                              UnitText="{Binding S_unit}"/>
                                     </StackLayout>
 
                                 </Grid>

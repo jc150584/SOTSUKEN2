@@ -3,9 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FoodStock01.CustomButtonMinus">
     <StackLayout Orientation="Horizontal">
-        <Label x:Name="buttomImage" Text="-" TextColor="DodgerBlue" FontSize="Large"/>
+        <Image x:Name="buttomImage" Source="minus16.png"/>
+        <Label x:Name="textNoLabel" IsVisible="False"/>
         <Label x:Name="textNameLabel" IsVisible="False"/>
         <Label x:Name="textCountLabel" IsVisible="False"/>
+        <Label x:Name="textUnitLabel" IsVisible="False"/>
     </StackLayout>
 
     <ContentView.GestureRecognizers>
