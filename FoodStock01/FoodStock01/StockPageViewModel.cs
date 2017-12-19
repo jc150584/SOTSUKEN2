@@ -17,25 +17,44 @@ namespace FoodStock01
 
         public StockPageViewModel()
         {
-            Stocks = new ObservableCollection<Stock> {
-                new Stock{
-                    Name = "醤油",
-                    Count = 2,
-                    Unit = "本"
-                },
-                new Stock{
-                    Name = "小麦粉",
-                    Count = 1,
-                    Unit = "袋"
-                },
-            };
+            if (StockFoodModel.SelectStock() != null)
+            {
+                var query = StockFoodModel.SelectStock();
+
+                Stocks = new ObservableCollection<Stock>();
+
+                foreach (var stock in query)
+                {
+                    Stock s = new Stock
+                    {
+                        S_no = stock.S_no,//試し
+                        S_name = stock.S_name,
+                        S_num = stock.S_num,
+                        S_unit = stock.S_unit
+                    };
+                    Stocks.Add(s);
+                }
+            }
+            else
+            {
+                Stocks = new ObservableCollection<Stock>
+                {
+                    new Stock
+                    {
+                        S_name = "NoData",
+                        S_num = 0,
+                        S_unit = "個"
+                    }
+                };
+            }
         }
     }
 
     public class Stock
     {
-        public string Name{ get; set; }
-        public int Count { get; set; }
-        public string Unit { get; set; }
+        public int S_no { get; set; }//試し
+        public string S_name { get; set; }
+        public int S_num { get; set; }
+        public string S_unit { get; set; }
     }
 }
