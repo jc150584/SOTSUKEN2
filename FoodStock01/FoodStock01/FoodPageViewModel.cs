@@ -20,27 +20,6 @@ namespace FoodStock01
             private set;
         }
 
-        // ListView.IsRefreshingと同期させるプロパティ
-        private bool isRefreshing;
-        public bool IsRefreshing
-        {
-            get { return isRefreshing; }
-            set
-            {
-                if (value == isRefreshing)
-                    return;
-                isRefreshing = value;
-            }
-        }
-
-        // ListViewを引っ張った時に実行させるコマンド
-        public ICommand RefreshCommand
-        {
-            get;
-            private set;
-        }
-
-
         public FoodPageViewModel()
         {
             if (FoodModel.SelectFood() != null)//
@@ -69,16 +48,6 @@ namespace FoodStock01
                     }
                 };
             }
-
-            RefreshCommand = new Command(async (nothing) => {
-
-                // Binding機構経由でListViewのIsRefreshingプロパティも変更する
-                IsRefreshing = false;
-            },
-                // ICommand.CanExecuteにもバインドしたプロパティを利用できる
-                (nothing) => !IsRefreshing
-            );
-
         }
     }
 

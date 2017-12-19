@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using FoodStock01;
+using System.Windows.Input;
 
 namespace FoodStock01
 {
@@ -20,6 +21,13 @@ namespace FoodStock01
             Title = title;
 
             InitializeComponent();
+
+            RefreshCommand = new Command(async (nothing) =>
+            { list.IsRefreshing = false;
+            },
+            // ICommand.CanExecuteにもバインドしたプロパティを利用できる
+                (nothing) => !list.IsRefreshing
+            );
         }
 
         /***試し***/
@@ -60,5 +68,10 @@ namespace FoodStock01
             InitializeComponent();
         }
 
+        public ICommand RefreshCommand
+        {
+            get;
+            private set;
+        }
     }
 }

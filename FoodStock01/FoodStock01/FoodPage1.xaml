@@ -53,8 +53,8 @@
             <ListView HasUnevenRows="true"
                       ItemsSource="{Binding Foods}"
                       IsPullToRefreshEnabled="True"
-                      RefreshCommand="{Binding RefreshCommand}"
-                      IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
+                      RefreshCommand="RefreshCommand"
+                      IsRefreshing="False"
                       x:Name="list">
                 <ListView.ItemTemplate>
                     <DataTemplate>
