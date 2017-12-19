@@ -20,8 +20,6 @@ namespace FoodStock01
             Title = title;
 
             InitializeComponent();
-
-            list.IsRefreshing = false;
         }
 
         /***試し***/
@@ -58,6 +56,17 @@ namespace FoodStock01
         {
             Title = "食材リスト";
             s = "http://cookpad.com/search/";
+
+            InitializeComponent();
+        }
+
+        void Refreshing(object sender, EventArgs args)
+        {
+
+            Title = "食材リスト";
+            s = "http://cookpad.com/search/";
+
+            list.IsRefreshing = false;
 
             InitializeComponent();
         }

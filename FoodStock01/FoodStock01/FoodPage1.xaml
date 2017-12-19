@@ -52,7 +52,9 @@
 
             <ListView HasUnevenRows="true"
                       ItemsSource="{Binding Foods}"
-                      IsPullToRefreshEnabled="False"
+                      IsPullToRefreshEnabled="True"
+                      RefreshCommand="Refreshing"
+                      IsRefreshing="False"
                       x:Name="list">
                 <ListView.ItemTemplate>
                     <DataTemplate>
