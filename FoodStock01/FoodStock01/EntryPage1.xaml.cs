@@ -22,6 +22,9 @@ namespace FoodStock01
 
         FoodPage1 page;
 
+        bool s_switch = false;//食材と保存どちらのインサートメソッドを呼び出すかのやつ
+
+        int qty = 0;
         /***ここまでフィールド***/
 
         public EntryPage1(string title)
@@ -35,6 +38,7 @@ namespace FoodStock01
             //初期化
             InitializeComponent();
         }
+
         void SelectSwitch(object sender, ToggledEventArgs args)
         {
             //保存食品
@@ -44,6 +48,7 @@ namespace FoodStock01
                 NumEntry.IsEnabled = true;
                 UnitEntry.IsEnabled = true;
 
+                s_switch = true;//保存食品用のインサートを使う
             }
             //食材
             else
@@ -51,18 +56,33 @@ namespace FoodStock01
                 NumEntry.IsEnabled = false;
                 UnitEntry.IsEnabled = false;
                 FoodPicker.IsEnabled = true;
+
+                s_switch = false;//食材用のインサートを使う
             }
         }
 
         /***************「登録ボタン」が押された時*********************/
         private void Insert01_Clicked(object sender, EventArgs e)
         {
-            //Foodテーブルにインサートする
-            //FoodModel.InsertFood(1, NameEntry.Text, d);//
-            //DisplayAlert(NameEntry.Text, d.ToString(), "ok");
+            if (!s_switch)//食材の登録だったら
+            {
+                FoodModel.InsertFood(1, NameEntry.Text, result);//
+                DisplayAlert(NameEntry.Text, "あと" + result.ToString() + "日", "OK");
 
-            FoodModel.InsertFood(1, NameEntry.Text, result);//
-            DisplayAlert(NameEntry.Text, result.ToString(), "ok");
+                NameEntry.Text = "";
+
+                FoodPicker.Date = new DateTime(now.Year, now.Month, now.Day);//
+            }
+            else//保存食品の登録だったら
+            {
+                qty = int.Parse(NumEntry.Text);
+                StockFoodModel.InsertStock(1, NameEntry.Text, qty, UnitEntry.Text);
+                DisplayAlert(NameEntry.Text, qty.ToString() + UnitEntry.Text, "OK");
+
+                NameEntry.Text = "";
+                NumEntry.Text = "";
+                UnitEntry.Text = "";
+            }
         }
 
         /***************「すべて削除ボタン」が押された時********************/
