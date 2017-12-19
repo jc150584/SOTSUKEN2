@@ -20,6 +20,8 @@ namespace FoodStock01
             Title = title;
 
             InitializeComponent();
+
+            list.IsRefreshing = false;
         }
 
         /***試し***/
@@ -58,7 +60,7 @@ namespace FoodStock01
             s = "http://cookpad.com/search/";
 
             InitializeComponent();
-
         }
+
     }
 }

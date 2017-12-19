@@ -51,7 +51,9 @@
             </Grid>
 
             <ListView HasUnevenRows="true"
-                  ItemsSource="{Binding Foods}">
+                      ItemsSource="{Binding Foods}"
+                      IsPullToRefreshEnabled="False"
+                      x:Name="list">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
