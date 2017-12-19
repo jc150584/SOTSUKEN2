@@ -54,7 +54,8 @@ namespace FoodStock01
 
         private void Update_Button_Clicked(object sender, EventArgs e)
         {
-            Title = "食材";
+            Title = "食材リスト";
+            s = "http://cookpad.com/search/";
 
             InitializeComponent();
 
