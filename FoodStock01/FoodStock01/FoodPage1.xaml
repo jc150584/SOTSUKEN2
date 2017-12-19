@@ -84,13 +84,13 @@
                                        Grid.Column="1" Grid.Row="0"
                                        HorizontalOptions="Start"
                                        VerticalOptions="End"/>
+                                </Grid>
 
-                                    <toolkit:CheckBox CheckedChanged="ChackBoxChanged" 
+                                <toolkit:CheckBox CheckedChanged="ChackBoxChanged" 
                                                   Grid.Column="2" Grid.Row="0"
                                                   HorizontalOptions="End"
                                                   VerticalOptions="Center"
                                                   Text="{Binding F_name}"/>
-                                </Grid>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
