@@ -60,16 +60,5 @@ namespace FoodStock01
             InitializeComponent();
         }
 
-        void Refreshing(object sender, EventArgs args)
-        {
-
-            Title = "食材リスト";
-            s = "http://cookpad.com/search/";
-
-            list.IsRefreshing = false;
-
-            InitializeComponent();
-        }
-
     }
 }
