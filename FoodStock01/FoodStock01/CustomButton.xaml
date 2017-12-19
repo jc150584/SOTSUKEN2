@@ -4,7 +4,7 @@
              x:Class="FoodStock01.CustomButton">
 
     <StackLayout Orientation="Horizontal">
-        <Image x:Name="buttomImage" Source="plus16.png"/>
+        <Image x:Name="buttomImage" Source="plus24.png"/>
         <Label x:Name="textNoLabel" IsVisible="False"/>
         <Label x:Name="textNameLabel" IsVisible="False"/>
         <Label x:Name="textCountLabel" IsVisible="False"/>
