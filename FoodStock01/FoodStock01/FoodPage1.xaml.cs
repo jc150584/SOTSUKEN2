@@ -23,7 +23,11 @@ namespace FoodStock01
             InitializeComponent();
 
             RefreshCommand = new Command(async (nothing) =>
-            { list.IsRefreshing = false;
+            {   list.IsRefreshing = false;
+                Title = "食材リスト";
+                s = "http://cookpad.com/search/";
+
+                InitializeComponent();
             },
             // ICommand.CanExecuteにもバインドしたプロパティを利用できる
                 (nothing) => !list.IsRefreshing
