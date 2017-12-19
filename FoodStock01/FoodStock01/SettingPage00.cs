@@ -7,9 +7,9 @@ using Xamarin.Forms;
 
 namespace FoodStock01
 {
-    public class SettingPage : ContentPage
+    public class SettingPage00 : ContentPage
     {
-        public SettingPage(string title)
+        public SettingPage00(string title)
         {
             //タブに表示される文字列
             Title = title;

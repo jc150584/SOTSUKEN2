@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodStock01.SettingPage">
+
+    <ContentPage.Resources>
+    <ResourceDictionary>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="DodgerBlue" />
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="HeightRequest" Value="60" />
+            <Setter Property="WidthRequest" Value="200" />
+            <Setter Property="Margin" Value="0,5,0,5" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+        </Style>
+    </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Margin="20,10,20,10">
+            <Grid Margin="0, 0, 0, 10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="通知日数"
+                    Grid.Column="0" Grid.Row="0"    
+                    HorizontalOptions="CenterAndExpand" />
+
+                <Picker
+                    Grid.Column="1" Grid.Row="0" 
+                    HorizontalOptions="End"
+                    WidthRequest="100">
+                    <Picker.Items>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>7</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="日前"
+                       Grid.Column="2" Grid.Row="0"
+                       HorizontalOptions="Start"/>
+            </Grid>
+
+            <Button Text="保存" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
