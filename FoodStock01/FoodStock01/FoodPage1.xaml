@@ -98,7 +98,7 @@
                             </Grid>
                             <toolkit:CostomButtonDelete CheckedChanged="OnDelete_Clicked"
                                                         Grid.Column="3" Grid.Row="0"
-                                                        NoText="{Bindind F_no}"
+                                                        NoText="{Binding F_no}"
                                                         NameText="{Binding F_name}"/>
                         </ViewCell>
                     </DataTemplate>
