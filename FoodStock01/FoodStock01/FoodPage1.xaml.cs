@@ -23,16 +23,6 @@ namespace FoodStock01
             InitializeComponent();
         }
 
-        /***試し***/
-        /*public FoodPage1(int insert)
-        {
-            if(insert == 1)
-            {
-                InitializeComponent();
-            }
-        }*/
-        /***試し***/
-
         void ChackBoxChanged(object sender, bool isChecked)
         {
             //選択された時の処理
@@ -52,13 +42,6 @@ namespace FoodStock01
             //ページ遷移
             Navigation.PushAsync(new NextPage(s));
         }
-
-        /* private void Update_Button_Clicked(object sender, EventArgs e)
-         {
-             Title = "食材リスト";
-             s = "http://cookpad.com/search/";
-             InitializeComponent();
-         }*/
 
         //引っ張ったとき（更新）
         private async void OnRefreshing(object sender, EventArgs e)

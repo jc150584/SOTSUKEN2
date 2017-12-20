@@ -13,14 +13,13 @@ namespace FoodStock01
     public partial class EntryPage1 : ContentPage
     {
         /***ここからフィールド***/
-        DateTime d; //フードピッカーの値を一時的に保持する
+        DateTime yyyymmdd; //フードピッカーの値を一時的に保持する
+
         TimeSpan s; //後で使うかも
 
         DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);//現在日付
 
         int result;
-
-        FoodPage1 page;
 
         bool s_switch = false;//食材と保存どちらのインサートメソッドを呼び出すかのやつ
 
@@ -38,6 +37,13 @@ namespace FoodStock01
             //初期化
             InitializeComponent();
         }
+
+        /***いらないか***/
+        public EntryPage1()
+        {
+
+        }
+        /*******↑********/
 
         void SelectSwitch(object sender, ToggledEventArgs args)
         {
@@ -66,8 +72,9 @@ namespace FoodStock01
         {
             if (!s_switch)//食材の登録だったら
             {
-                FoodModel.InsertFood(1, NameEntry.Text, result);//
-                DisplayAlert(NameEntry.Text, "あと" + result.ToString() + "日", "OK");
+
+                FoodModel.InsertFood(1, NameEntry.Text, result, yyyymmdd);//試し
+                DisplayAlert(NameEntry.Text + yyyymmdd.ToString(), "あと" + result.ToString() + "日", "OK");
 
                 NameEntry.Text = "";
 
@@ -94,13 +101,21 @@ namespace FoodStock01
         /*************フードピッカーで日付を選択したとき******************/
         private void FoodPicker_DateSelected(object sender, DateChangedEventArgs e)
         {
-            //d = FoodPicker.Date;
-            d = new DateTime(FoodPicker.Date.Year, FoodPicker.Date.Month, FoodPicker.Date.Day);
+            yyyymmdd = new DateTime(FoodPicker.Date.Year, FoodPicker.Date.Month, FoodPicker.Date.Day);
 
-            s = d - now;
+            s = yyyymmdd - now;
 
             result = s.Days;
+        }
 
+        /*************日付関係の試し（たぶん使わない）*********************************************/
+        public static int Span(DateTime d)
+        {
+            TimeSpan t = d - new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
+            int span = t.Days;
+
+            return span;
         }
     }
 }
