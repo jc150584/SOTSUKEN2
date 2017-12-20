@@ -25,7 +25,7 @@ namespace FoodStock01
                    new FoodNavi(new FoodPage1("食材リスト")),
                    new StockNavi(new StockPage1("保存食品リスト")),
                    new EntryNavi(new EntryPage1("登録")),
-                   new MemoNavi(new MemoPage1("メモ")),
+                   new MemoNavi(new MemoPage("メモ")),
                    new SettingNavi(new SettingPage("設定")),
                    //new RecipePage("レシピ")
                 }
