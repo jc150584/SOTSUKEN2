@@ -37,6 +37,15 @@ namespace FoodStock01
             }
         }
 
+        //デリート押された
+        void OnDelete_Clicked(object sender, EventArgs args)
+        {
+            string no = ((CustomButtonDelete)sender).NoText;
+            string name = ((CustomButtonDelete)sender).NameText;
+
+            DisplayAlert("Delete","主キー"+no+" "+name,"ok");
+        }
+
         void OnSearch_Clicked(object sender, EventArgs args)
         {
             //ページ遷移

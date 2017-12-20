@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FoodStock01.CustomButtonDelete">
     <StackLayout Orientation="Horizontal">
-        <Image x:Name="buttomImage" Source="plus24.png"/>
+        <Image x:Name="buttomImage" Source="can24.png"/>
         <Label x:Name="textNoLabel" IsVisible="False"/>
         <Label x:Name="textNameLabel" IsVisible="False"/>
         <Label x:Name="textCountLabel" IsVisible="False"/>

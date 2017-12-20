@@ -16,55 +16,55 @@ namespace FoodStock01
            BindableProperty.Create(
                "NoText",
                typeof(string),
-               typeof(CustomButton),
+               typeof(CustomButtonDelete),
                null,
                propertyChanged: (bindable, oldValue, newValue) =>
                {
-                   ((CustomButton)bindable).textNoLabel.Text = (string)newValue;
+                   ((CustomButtonDelete)bindable).textNoLabel.Text = (string)newValue;
                });
 
         public static readonly BindableProperty NameTextProperty =
            BindableProperty.Create(
                "NameText",
                typeof(string),
-               typeof(CustomButton),
+               typeof(CustomButtonDelete),
                null,
                propertyChanged: (bindable, oldValue, newValue) =>
                {
-                   ((CustomButton)bindable).textNameLabel.Text = (string)newValue;
+                   ((CustomButtonDelete)bindable).textNameLabel.Text = (string)newValue;
                });
 
         public static readonly BindableProperty CountTextProperty =
           BindableProperty.Create(
               "CountText",
               typeof(string),
-              typeof(CustomButton),
+              typeof(CustomButtonDelete),
               null,
               propertyChanged: (bindable, oldValue, newValue) =>
               {
-                  ((CustomButton)bindable).textCountLabel.Text = (string)newValue;
+                  ((CustomButtonDelete)bindable).textCountLabel.Text = (string)newValue;
               });
 
         public static readonly BindableProperty UnitTextProperty =
           BindableProperty.Create(
               "UnitText",
               typeof(string),
-              typeof(CustomButton),
+              typeof(CustomButtonDelete),
               null,
               propertyChanged: (bindable, oldValue, newValue) =>
               {
-                  ((CustomButton)bindable).textUnitLabel.Text = (string)newValue;
+                  ((CustomButtonDelete)bindable).textUnitLabel.Text = (string)newValue;
               });
 
         public static readonly BindableProperty IsCheckedProperty =
            BindableProperty.Create(
                "IsChecked",
                typeof(bool),
-               typeof(CustomButton),
+               typeof(CustomButtonDelete),
                false,
                propertyChanged: (bindable, oldValue, newValue) =>
                {
-                   CustomButton button = (CustomButton)bindable;
+                   CustomButtonDelete button = (CustomButtonDelete)bindable;
 
                    //イベント発行
                    EventHandler<bool> eventHandler = button.CheckedChanged;

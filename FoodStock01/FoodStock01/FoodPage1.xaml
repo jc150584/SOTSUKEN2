@@ -66,6 +66,7 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
                                 <Label Text="{Binding F_name}" 
@@ -95,6 +96,10 @@
                                                   VerticalOptions="Center"
                                                   Text="{Binding F_name}"/>
                             </Grid>
+                            <toolkit:CostomButtonDelete CheckedChanged="OnDelete_Clicked"
+                                                        Grid.Column="3" Grid.Row="0"
+                                                        NoText="{Bindind F_no}"
+                                                        NameText="{Binding F_name}"/>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
