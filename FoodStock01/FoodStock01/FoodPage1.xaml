@@ -95,11 +95,14 @@
                                                   HorizontalOptions="End"
                                                   VerticalOptions="Center"
                                                   Text="{Binding F_name}"/>
-                            </Grid>
-                            <toolkit:CustomButtonDelete CheckedChanged="OnDelete_Clicked"
+
+                                <toolkit:CustomButtonDelete CheckedChanged="OnDelete_Clicked"
                                                         Grid.Column="3" Grid.Row="0"
+                                                        HorizontalOptions="End"
                                                         NoText="{Binding F_no}"
                                                         NameText="{Binding F_name}"/>
+                            </Grid>
+                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
