@@ -53,26 +53,19 @@ namespace FoodStock01
             Navigation.PushAsync(new NextPage(s));
         }
 
-        /* private void Update_Button_Clicked(object sender, EventArgs e)
-         {
-             Title = "食材リスト";
-             s = "http://cookpad.com/search/";
-             InitializeComponent();
-         }*/
-
-        //引っ張ったとき（更新）
-        private async void OnRefreshing(object sender, EventArgs e)
+        private void Update_Button_Clicked(object sender, EventArgs e)
         {
-            // 1秒処理を待つ
-            await Task.Delay(1000);
-
-            //リフレッシュを止める
-            list.IsRefreshing = false;
-
             Title = "食材リスト";
             s = "http://cookpad.com/search/";
 
             InitializeComponent();
+        }
+
+        //引っ張ったとき（更新）
+        private async void OnRefreshing(object sender, EventArgs e)
+        {
+            get;
+            private set;
         }
     }
 }
