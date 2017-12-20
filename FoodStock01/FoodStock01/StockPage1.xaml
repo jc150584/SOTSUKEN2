@@ -100,14 +100,16 @@
                                                               NameText ="{Binding S_name}"
                                                               CountText ="{Binding S_num}"
                                                               UnitText="{Binding S_unit}"
-                                                              HorizontalOptions="Center"/>
+                                                              HorizontalOptions="Center"
+                                                              Margin="10,0,10,0"/>
                                         <toolkit:CustomButtonMinus Grid.Column="1" Grid.Row="0"
                                                               CheckedChanged = "OnMinus_Clicked"
                                                               NoText="{Binding S_no}"
                                                               NameText ="{Binding S_name}"
                                                               CountText ="{Binding S_num}"
                                                               UnitText="{Binding S_unit}" 
-                                                              HorizontalOptions="Center"/>
+                                                              HorizontalOptions="Center"
+                                                              Margin="10,0,10,0"/>
                                     </Grid>
                                     <!-- <StackLayout Grid.Column="2" Grid.Row="0">
                                         <toolkit:CustomButton CheckedChanged = "OnPlus_Clicked"
