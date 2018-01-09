@@ -24,8 +24,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>CFBundleDisplayName</key>
-	<string>FoodStock01</string>
 	<key>CFBundleIdentifier</key>
 	<string>jp.jc21.FoodStock01</string>
 	<key>CFBundleVersion</key>
@@ -71,5 +69,7 @@
 	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
 	<key>XSAppIconAssets</key>
 	<string>Resources/Media.xcassets/AppIcons.appiconset</string>
+	<key>CFBundleDisplayName</key>
+	<string>食品管理</string>
 </dict>
 </plist>
