@@ -99,7 +99,8 @@
                 </Grid>
             </StackLayout>
             <ScrollView>
-                    <Image Source="image2.jpeg"/>
+                    <Image Source="image2.jpeg"
+                           Margin="0,30,0,0"/>
                 <!--</StackLayout>-->
             </ScrollView>
 
