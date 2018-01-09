@@ -75,6 +75,7 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="2*" />
                                     </Grid.ColumnDefinitions>
+                                    
 
                                     <Label Text="{Binding S_num}" 
                                        Grid.Column="0" Grid.Row="0"
