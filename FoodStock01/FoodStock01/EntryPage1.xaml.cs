@@ -104,7 +104,13 @@ namespace FoodStock01
                     }
                     else
                     {
-                        DisplayAlert("入力エラー", "日付を入力してください", "OK");
+                        yyyymmdd = now;
+                        FoodModel.InsertFood(1, NameEntry.Text, result, yyyymmdd);//試し
+                        DisplayAlert(NameEntry.Text + yyyymmdd.ToString("yyyy/MM/dd"), "あと" + result.ToString() + "日", "OK");
+
+                        NameEntry.Text = "";
+
+                        FoodPicker.Date = new DateTime(now.Year, now.Month, now.Day);
                     }
                 }
                 else//保存食品の登録だったら
