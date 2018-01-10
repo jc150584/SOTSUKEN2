@@ -71,7 +71,7 @@
                             DateSelected="FoodPicker_DateSelected" />
                 </StackLayout>
 
-                <Grid Margin="0,0,0,60">
+                <Grid Margin="0,0,0,50">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
@@ -100,6 +100,7 @@
                                HeightRequest="28"/>
                     </StackLayout>
                 </Grid>
+                <Label Text=""/>
                 <ScrollView>
                     <Image Source="image2.jpeg"/>
                 <!--</StackLayout>-->
