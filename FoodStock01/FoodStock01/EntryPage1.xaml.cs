@@ -115,13 +115,33 @@ namespace FoodStock01
                 }
                 else//保存食品の登録だったら
                 {
-                    qty = int.Parse(NumEntry.Text);
-                    StockFoodModel.InsertStock(1, NameEntry.Text, qty, UnitEntry.Text);
-                    DisplayAlert(NameEntry.Text, qty.ToString() + UnitEntry.Text, "OK");
+                    if ((!(NumEntry.Text == null) && !(NumEntry.Text.Equals(""))) && (!(UnitEntry.Text == null) && !(UnitEntry.Text.Equals("")))) {
+                        if (!(yyyymmdd.ToString("yyyy/MM/dd").Equals("0001/01/01")))//日付が入力されている
+                        {
+                            qty = int.Parse(NumEntry.Text);
+                            StockFoodModel.InsertStock(1, NameEntry.Text, qty, UnitEntry.Text);
+                            DisplayAlert(NameEntry.Text, qty.ToString() + UnitEntry.Text, "OK");
 
-                    NameEntry.Text = "";
-                    NumEntry.Text = "";
-                    UnitEntry.Text = "";
+                            NameEntry.Text = "";
+                            NumEntry.Text = "";
+                            UnitEntry.Text = "";
+                        }
+                        else
+                        {
+                            yyyymmdd = now;
+                            qty = int.Parse(NumEntry.Text);
+                            StockFoodModel.InsertStock(1, NameEntry.Text, qty, UnitEntry.Text);
+                            DisplayAlert(NameEntry.Text, qty.ToString() + UnitEntry.Text, "OK");
+
+                            NameEntry.Text = "";
+                            NumEntry.Text = "";
+                            UnitEntry.Text = "";
+                        }
+                    }
+                    else
+                    {
+                        DisplayAlert("入力エラー", "数量・単位を入力してください", "OK");
+                    }
                 }
             }
             else
