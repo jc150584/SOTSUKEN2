@@ -89,16 +89,23 @@ namespace FoodStock01
             }
             */
 
-            if (!(NameEntry.Text==null))
+            if (!(NameEntry.Text==null) && !(NameEntry.Text.Equals("")))
             {
                 if (!s_switch)//食材の登録だったら
                 {
-                    FoodModel.InsertFood(1, NameEntry.Text, result, yyyymmdd);//試し
-                    DisplayAlert(NameEntry.Text + yyyymmdd.ToString("yyyy/MM/dd"), "あと" + result.ToString() + "日", "OK");
+                    if (!(yyyymmdd == null))//日付が入力されている
+                    {
+                        FoodModel.InsertFood(1, NameEntry.Text, result, yyyymmdd);//試し
+                        DisplayAlert(NameEntry.Text + yyyymmdd.ToString("yyyy/MM/dd"), "あと" + result.ToString() + "日", "OK");
 
-                    NameEntry.Text = "";
+                        NameEntry.Text = "";
 
-                    FoodPicker.Date = new DateTime(now.Year, now.Month, now.Day);//
+                        FoodPicker.Date = new DateTime(now.Year, now.Month, now.Day);
+                    }
+                    else
+                    {
+                        DisplayAlert("入力エラー", "日付を入力してください", "OK");
+                    }
                 }
                 else//保存食品の登録だったら
                 {
