@@ -93,7 +93,7 @@ namespace FoodStock01
             {
                 if (!s_switch)//食材の登録だったら
                 {
-                    if (!(yyyymmdd == null))//日付が入力されている
+                    if (!(yyyymmdd.ToString("yyyy/MM/dd").Equals("0001/01/01")))//日付が入力されている
                     {
                         FoodModel.InsertFood(1, NameEntry.Text, result, yyyymmdd);//試し
                         DisplayAlert(NameEntry.Text + yyyymmdd.ToString("yyyy/MM/dd"), "あと" + result.ToString() + "日", "OK");
