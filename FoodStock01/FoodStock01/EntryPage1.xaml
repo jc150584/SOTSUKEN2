@@ -97,7 +97,6 @@
                                IsEnabled="False"/>
                     </StackLayout>
                 </Grid>
-
                 <ScrollView  Margin="0,30,0,0">
                     <Image Source="image2.jpeg"/>
                 <!--</StackLayout>-->
