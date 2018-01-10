@@ -58,7 +58,7 @@
                     <Entry Placeholder="【食品名】入力してください"
                            x:Name="NameEntry"
                            IsEnabled="True"
-                           HeightRequest="26"/>
+                           HeightRequest="28"/>
                     <Label Text="※レシピの検索に使用します"
                             FontSize="Small" />
                 </StackLayout>
@@ -71,7 +71,7 @@
                             DateSelected="FoodPicker_DateSelected" />
                 </StackLayout>
 
-                <Grid Margin="0,0,0,40">
+                <Grid Margin="0,0,0,60">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
@@ -87,7 +87,7 @@
                         <Entry Placeholder="【数量】入力してください"
                                x:Name="NumEntry"
                                IsEnabled="False"
-                               HeightRequest="26"/>
+                               HeightRequest="28"/>
                     </StackLayout>
 
                     <StackLayout HorizontalOptions="Start"
@@ -97,7 +97,7 @@
                         <Entry Placeholder="【単位】入力してください"
                                x:Name="UnitEntry"
                                IsEnabled="False"
-                               HeightRequest="26"/>
+                               HeightRequest="28"/>
                     </StackLayout>
                 </Grid>
                 <ScrollView>
