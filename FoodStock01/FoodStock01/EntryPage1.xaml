@@ -103,7 +103,10 @@
                 </ScrollView>
             </StackLayout>
 
-            <Grid>
+            <Button Text="登録"
+                    x:Name="Insert01"
+                    Clicked="Insert01_Clicked"/>
+            <!--<Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
@@ -113,15 +116,15 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Text="登録"
-                    Grid.Column="0" Grid.Row="0"
+                    Column="0" Grid.Row="0"
                     x:Name="Insert01"
                     Clicked="Insert01_Clicked"/>
 
-                <Button Text="続けて登録"
+                <<Button Text="続けて登録"
                     Grid.Column="1" Grid.Row="0"
                     x:Name="Insert02"
                     Clicked="Insert02_Clicked"/>
-            </Grid>
+            </Grid>-->
 
         </StackLayout>
     </ContentPage.Content>
