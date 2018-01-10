@@ -56,10 +56,11 @@
                              Margin="0, 0, 0, 10">
                     <Label Text="食品名"/>
                     <Entry Placeholder="【食品名】入力してください"
-                            x:Name="NameEntry"
-                            IsEnabled="True"/>
+                           x:Name="NameEntry"
+                           IsEnabled="True"
+                           HeightRequest="26"/>
                     <Label Text="※レシピの検索に使用します"
-                            FontSize="14" />
+                            FontSize="Small" />
                 </StackLayout>
 
                 <StackLayout Margin="0, 0, 0, 10">
@@ -70,7 +71,7 @@
                             DateSelected="FoodPicker_DateSelected" />
                 </StackLayout>
 
-                <Grid Margin="0,0,0,20">
+                <Grid Margin="0,0,0,40">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
@@ -84,8 +85,9 @@
                         Margin="0, 0, 0, 10">
                         <Label Text="数量（保存食品のみ）"/>
                         <Entry Placeholder="【数量】入力してください"
-                              x:Name="NumEntry"
-                              IsEnabled="False"/>
+                               x:Name="NumEntry"
+                               IsEnabled="False"
+                               HeightRequest="26"/>
                     </StackLayout>
 
                     <StackLayout HorizontalOptions="Start"
@@ -94,10 +96,11 @@
                         <Label Text="単位（保存食品のみ）"/>
                         <Entry Placeholder="【単位】入力してください"
                                x:Name="UnitEntry"
-                               IsEnabled="False"/>
+                               IsEnabled="False"
+                               HeightRequest="26"/>
                     </StackLayout>
                 </Grid>
-                <ScrollView  Margin="0,10,0,0">
+                <ScrollView>
                     <Image Source="image2.jpeg"/>
                 <!--</StackLayout>-->
                 </ScrollView>
