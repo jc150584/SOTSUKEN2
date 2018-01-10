@@ -47,7 +47,7 @@
 		<string>Icon-Small@3x</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>(設定なし)</string>
 	<key>MinimumOSVersion</key>
 	<string>10.0</string>
 	<key>NSCameraUsageDescription</key>
@@ -63,13 +63,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>UIMainStoryboardFile</key>
-	<string>LaunchScreen</string>
 	<key>XSAppIconAssets</key>
 	<string>Resources/Media.xcassets/AppIcons.appiconset</string>
 	<key>CFBundleDisplayName</key>
 	<string>食品管理</string>
-	<key>XSLaunchImageAssets</key>
-	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
 </dict>
 </plist>
