@@ -279,7 +279,13 @@
     <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\launch_tate.png">
       <InProject>false</InProject>
     </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\launch_tate1536.png">
+      <InProject>false</InProject>
+    </ImageAsset>
     <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\launch_yoko.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\launch_yoko1536.png">
       <InProject>false</InProject>
     </ImageAsset>
   </ItemGroup>

@@ -65,11 +65,11 @@
 	</dict>
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
-	<key>XSLaunchImageAssets</key>
-	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
 	<key>XSAppIconAssets</key>
 	<string>Resources/Media.xcassets/AppIcons.appiconset</string>
 	<key>CFBundleDisplayName</key>
 	<string>食品管理</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
 </dict>
 </plist>
