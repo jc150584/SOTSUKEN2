@@ -13,13 +13,6 @@
         <StackLayout VerticalOptions="Start"
                      Margin="20, 10, 20, 10">
 
-            <!--<Button Text="更新"
-                    x:Name="Update_Button"
-                    Grid.Column="2" Grid.Row="0"
-                    HorizontalOptions="End"
-                    VerticalOptions="Center"
-                    Clicked="Update_Button_Clicked"/>-->
-
             <Grid Padding="10,20,10,20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -75,16 +68,23 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="2*" />
                                     </Grid.ColumnDefinitions>
-                                    
 
                                     <Label Text="{Binding S_num}" 
                                        Grid.Column="0" Grid.Row="0"
                                        HorizontalOptions="End"
                                        FontSize="Large"/>
+
+                                    <!--<Label BindingContext="{x:Reference stepper1}"
+                                           Text="{Binding Value}"/>-->
+
                                     <Label Text="{Binding S_unit}" 
                                        Grid.Column="1" Grid.Row="0"
                                        HorizontalOptions="Start"
                                        VerticalOptions="Start"/>
+
+                                    <!--<Stepper Grid.Column="2" Grid.Row="0"
+                                             Value="{Binding S_num}"
+                                             x:Name="stepper1"/>-->
 
                                     <Grid Grid.Column="2" Grid.Row="0">
                                         <Grid.RowDefinitions>
@@ -112,20 +112,6 @@
                                                               HorizontalOptions="Center"
                                                               Margin="10,0,10,0"/>
                                     </Grid>
-                                    <!-- <StackLayout Grid.Column="2" Grid.Row="0">
-                                        <toolkit:CustomButton CheckedChanged = "OnPlus_Clicked"
-                                                              NoText="{Binding S_no}"
-                                                              NameText ="{Binding S_name}"
-                                                              CountText ="{Binding S_num}"
-                                                              UnitText="{Binding S_unit}"
-                                                              Margin="0,0,10,0"/>
-                                        <toolkit:CustomButtonMinus CheckedChanged = "OnMinus_Clicked"
-                                                              NoText="{Binding S_no}"
-                                                              NameText ="{Binding S_name}"
-                                                              CountText ="{Binding S_num}"
-                                                              UnitText="{Binding S_unit}"
-                                                              Margin="0,10,0,0"/>
-                                    </StackLayout>-->
 
                                 </Grid>
 

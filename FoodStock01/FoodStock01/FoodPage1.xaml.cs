@@ -21,6 +21,7 @@ namespace FoodStock01
             Title = title;
 
             InitializeComponent();
+
         }
 
         void ChackBoxChanged(object sender, bool isChecked)

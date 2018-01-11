@@ -20,13 +20,6 @@ namespace FoodStock01
             InitializeComponent();
         }
 
-        //更新ボタンが押された時
-        /* private void Update_Button_Clicked(object sender, EventArgs e)
-         {
-             Title = "保存食品リスト";
-             InitializeComponent();
-         }*/
-
         //引っ張ったとき（更新）
         private async void OnRefreshing(object sender, EventArgs e)
         {
@@ -46,18 +39,6 @@ namespace FoodStock01
         {
             string no = ((CustomButtonDelete)sender).NoText;
             string name = ((CustomButtonDelete)sender).NameText;
-
-            /*
-            DisplayAlert("Delete", "主キー" + no + " " + name, "ok");
-            /***試し***/
-            /*
-            int s_no = int.Parse(no);
-            StockFoodModel.DeleteStock(s_no);
-            Title = "保存食品リスト";
-        
-            InitializeComponent();
-            */
-            /*********/
 
             var result = await DisplayAlert("削除", "この保存食品を削除しますか", "OK", "キャンセル");
             if (result == true)

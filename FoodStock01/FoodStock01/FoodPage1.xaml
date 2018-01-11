@@ -76,7 +76,7 @@
 
                                 <Label Text="{Binding F_name}" 
                                    Grid.Column="0" Grid.Row="0"
-                                   FontSize="Large"/>
+                                   FontSize="Medium"/>
                                 <Grid Grid.Column="1" Grid.Row="0">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*" />
@@ -88,7 +88,7 @@
                                     <Label Text="{Binding F_result}" 
                                        Grid.Column="0" Grid.Row="0"
                                        HorizontalOptions="End"
-                                       FontSize="Large"/>
+                                       FontSize="Medium"/>
                                     <Label Text="日" 
                                        Grid.Column="1" Grid.Row="0"
                                        HorizontalOptions="Start"
