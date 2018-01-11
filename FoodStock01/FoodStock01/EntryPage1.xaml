@@ -72,40 +72,40 @@
                     </StackLayout>
 
                     <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                    <StackLayout HorizontalOptions="Start"
-                        Grid.Column="0" Grid.Row="0"
-                        Margin="0, 0, 0, 10">
-                        <Label Text="数量（保存食品のみ）"/>
-                        <Entry Placeholder="【数量】入力してください"
-                               x:Name="NumEntry"
-                               IsEnabled="False"
-                               HeightRequest="28"/>
-                    </StackLayout>
+                        <StackLayout HorizontalOptions="Start"
+                                     Grid.Column="0" Grid.Row="0"
+                                     Margin="0, 0, 0, 10">
+                            <Label Text="数量（保存食品のみ）"/>
+                            <Entry Placeholder="【数量】入力してください"
+                                   x:Name="NumEntry"
+                                   IsEnabled="False"
+                                   HeightRequest="28"/>
+                        </StackLayout>
 
-                    <StackLayout HorizontalOptions="Start"
-                        Grid.Column="1" Grid.Row="0"
-                        Margin="0, 0, 0, 10">
-                        <Label Text="単位（保存食品のみ）"/>
-                        <Entry Placeholder="【単位】入力してください"
-                               x:Name="UnitEntry"
-                               IsEnabled="False"
-                               HeightRequest="28"/>
-                    </StackLayout>
-                </Grid>
+                        <StackLayout HorizontalOptions="Start"
+                                     Grid.Column="1" Grid.Row="0"
+                                     Margin="0, 0, 0, 10">
+                            <Label Text="単位（保存食品のみ）"/>
+                            <Entry Placeholder="【単位】入力してください"
+                                   x:Name="UnitEntry"
+                                   IsEnabled="False"
+                                   HeightRequest="28"/>
+                        </StackLayout>
+               　　 </Grid>
 
                 </StackLayout>
 
-                <ScrollView>
+                <!--<ScrollView>-->
                      <Image Source="image2.jpeg"/>
-                </ScrollView>
+                <!--</ScrollView>-->
             </StackLayout>
 
             <Button Text="登録"
