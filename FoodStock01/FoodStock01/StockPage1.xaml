@@ -57,7 +57,7 @@
 
                                 <Label Text="{Binding S_name}" 
                                    Grid.Column="0" Grid.Row="0"
-                                   FontSize="Large"/>
+                                   FontAttributes="Bold"/>
 
                                 <Grid Grid.Column="1" Grid.Row="0">
                                     <Grid.RowDefinitions>
@@ -72,15 +72,14 @@
                                     <Label Text="{Binding S_num}" 
                                        Grid.Column="0" Grid.Row="0"
                                        HorizontalOptions="End"
-                                       FontSize="Large"/>
+                                       FontAttributes="Bold"/>
 
                                     <!--<Label BindingContext="{x:Reference stepper1}"
                                            Text="{Binding Value}"/>-->
 
                                     <Label Text="{Binding S_unit}" 
                                        Grid.Column="1" Grid.Row="0"
-                                       HorizontalOptions="Start"
-                                       VerticalOptions="Start"/>
+                                       HorizontalOptions="Start"/>
 
                                     <!--<Stepper Grid.Column="2" Grid.Row="0"
                                              Value="{Binding S_num}"
