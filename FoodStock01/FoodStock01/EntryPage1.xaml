@@ -30,6 +30,7 @@
         <StackLayout VerticalOptions="Start"
                      Margin="20, 10, 20, 10">
             <StackLayout>
+                <StackLayout Margin="0,0,0,40">
                     <Grid Margin="0, 0, 0, 10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
@@ -95,11 +96,14 @@
                             <Label Text="単位（保存食品のみ）"/>
                             <Entry Placeholder="【単位】入力してください"
                                    x:Name="UnitEntry"
-                                   IsEnabled="False"/>
+                                   IsEnabled="False"
+                                   HeightRequest="28"/>
                         </StackLayout>
                     </Grid>
 
-                    <ScrollView>
+                </StackLayout>
+
+                <ScrollView>
                         <StackLayout>
                         <Image x:Name="image"/>
                         </StackLayout>
