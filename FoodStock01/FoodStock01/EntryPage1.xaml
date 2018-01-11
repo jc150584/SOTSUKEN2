@@ -29,8 +29,7 @@
 
         <StackLayout VerticalOptions="Start"
                      Margin="20, 10, 20, 10">
-            <ScrollView>
-                <StackLayout>
+            <StackLayout>
                     <Grid Margin="0, 0, 0, 10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
@@ -71,7 +70,7 @@
                             DateSelected="FoodPicker_DateSelected" />
                     </StackLayout>
 
-                    <Grid>
+                    <Grid Margin="0,0,0,40">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
@@ -100,29 +99,17 @@
                         </StackLayout>
                     </Grid>
 
-                    <Image Source="image2.jpeg"/>
+                    <ScrollView>
+                        <StackLayout>
+                            <Image Source="image2.jpeg"/>
+                        </StackLayout>
+                    </ScrollView>
+   
                 </StackLayout>
-            </ScrollView>
-
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
 
                 <Button Text="登録"
-                    Grid.Column="0" Grid.Row="0"
                     x:Name="Insert01"
                     Clicked="Insert01_Clicked"/>
-
-                <Button Text="続けて登録"
-                    Grid.Column="1" Grid.Row="0"
-                    x:Name="Insert02"
-                    Clicked="Insert02_Clicked"/>
-            </Grid>
 
         </StackLayout>
     </ContentPage.Content>
