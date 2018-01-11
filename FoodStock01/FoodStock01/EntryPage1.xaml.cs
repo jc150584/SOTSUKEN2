@@ -40,7 +40,7 @@ namespace FoodStock01
             string imagename = Device.Idiom.ToString();
             if (imagename.Equals("Phone")) //iphoneのとき
             {
-                image.Source = "image4.jpeg";
+                
             }
             else //ipadのとき
             {
