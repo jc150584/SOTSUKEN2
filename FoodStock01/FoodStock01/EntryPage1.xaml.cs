@@ -36,6 +36,16 @@ namespace FoodStock01
 
             //初期化
             InitializeComponent();
+
+            string imagename = Device.Idiom.ToString();
+            if (imagename.Equals("Phone")) //iphoneのとき
+            {
+                image.Source = "image4.jpeg";
+            }
+            else //ipadのとき
+            {
+                image.Source = "image2.jpeg";
+            }
         }
 
         /***いらないか***/

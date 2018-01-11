@@ -41,7 +41,7 @@
                 <Label Text="食材名" 
                        BackgroundColor="Transparent"
                        Grid.Column="0" Grid.Row="0"/>
-                <Label Text="消費期限・賞味期限まで" 
+                <Label Text="消費・賞味期限" 
                        BackgroundColor="Transparent"
                        Grid.Column="1" Grid.Row="0"/>
                 <Label Text="レシピ使用" 

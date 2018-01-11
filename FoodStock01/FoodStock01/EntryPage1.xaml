@@ -101,7 +101,7 @@
 
                     <ScrollView>
                         <StackLayout>
-                            <Image Source="image2.jpeg"/>
+                        <Image x:Name="image"/>
                         </StackLayout>
                     </ScrollView>
    
