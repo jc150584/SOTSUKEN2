@@ -29,7 +29,8 @@
 
         <StackLayout VerticalOptions="Start"
                      Margin="20, 10, 20, 10">
-            <StackLayout>
+            <ScrollView>
+                <StackLayout>
                 <StackLayout Margin="0,0,0,40">
                     <Grid Margin="0, 0, 0, 10">
                         <Grid.RowDefinitions>
@@ -110,8 +111,8 @@
                     </ScrollView>
    
                 </StackLayout>
-
-                <Button Text="登録"
+            </ScrollView>
+            <Button Text="登録"
                     x:Name="Insert01"
                     Clicked="Insert01_Clicked"/>
 
