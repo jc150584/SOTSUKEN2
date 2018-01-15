@@ -59,8 +59,7 @@
                       IsPullToRefreshEnabled="True"
                       Refreshing="OnRefreshing"
                       HasUnevenRows="true"
-                      x:Name="list" 
-                      ItemTapped="ListView_ItemTapped">
+                      x:Name="list">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
