@@ -83,7 +83,7 @@ namespace FoodStock01
 
             Content = new StackLayout
             {
-                Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0),
+                //Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0),
                 Children =
                     {
                         new StackLayout

@@ -27,7 +27,7 @@
                     VerticalOptions="Center"
                     Clicked="Update_Button_Clicked"/>-->
 
-            <Grid Padding="10,10,10,20">
+            <Grid Padding="10,10,10,10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
