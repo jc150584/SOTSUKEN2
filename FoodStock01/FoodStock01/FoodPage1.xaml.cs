@@ -38,6 +38,25 @@ namespace FoodStock01
             }
         }
 
+        //タップで削除できるかな
+        async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+             string no = ((CustomButtonDelete)sender).NoText;
+            string name = ((CustomButtonDelete)sender).NameText;
+
+            var result = await DisplayAlert("削除", "この食材を削除しますか", "OK", "キャンセル");
+            if (result == true)
+            {
+                int f_no = int.Parse(no);
+                FoodModel.DeleteFood(f_no);
+
+                Title = "食材リスト";
+                s = "http://cookpad.com/search/";
+
+                InitializeComponent();
+            }
+        }
+
         //デリート押された
         //void OnDelete_Clicked(object sender, EventArgs args)
         async void OnDelete_Clicked(object sender, EventArgs args)
