@@ -23,8 +23,7 @@
       "minimum-system-version": "7.0",
       "scale": "1x",
       "size": "768x1024",
-      "idiom": "ipad",
-      "filename": "launch_tate.png"
+      "idiom": "ipad"
     },
     {
       "orientation": "landscape",
@@ -32,8 +31,7 @@
       "minimum-system-version": "7.0",
       "scale": "1x",
       "size": "1024x768",
-      "idiom": "ipad",
-      "filename": "launch_yoko.png"
+      "idiom": "ipad"
     },
     {
       "orientation": "portrait",
@@ -41,8 +39,7 @@
       "minimum-system-version": "7.0",
       "scale": "2x",
       "size": "1536x2048",
-      "idiom": "ipad",
-      "filename": "launch_tate1536.png"
+      "idiom": "ipad"
     },
     {
       "orientation": "landscape",
@@ -50,8 +47,7 @@
       "minimum-system-version": "7.0",
       "scale": "2x",
       "size": "2048x1536",
-      "idiom": "ipad",
-      "filename": "launch_yoko1536.png"
+      "idiom": "ipad"
     }
   ],
   "properties": {},

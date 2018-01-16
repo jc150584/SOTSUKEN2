@@ -65,5 +65,7 @@
 	</dict>
 	<key>CFBundleDisplayName</key>
 	<string>食品管理</string>
+	<key>XSAppIconAssets</key>
+	<string>Resources/Media.xcassets/AppIcons.appiconset</string>
 </dict>
 </plist>
