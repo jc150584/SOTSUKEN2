@@ -100,6 +100,12 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+            <Button Text="初回起動時に戻す（テスト用）"
+                    TextColor="White"
+                    BackgroundColor="DodgerBlue" 
+                    VerticalOptions="EndAndExpand"
+                    Clicked="Set_Start_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

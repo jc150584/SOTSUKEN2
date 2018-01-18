@@ -66,11 +66,5 @@ namespace FoodStock01
             DisplayAlert("最新の通知日数", select_max.ToString(), "OK");
         }
 
-        private void Select_Start_Clicked(object sender, EventArgs e)
-        {
-            FoodPage1.Set_Start();
-
-            DisplayAlert("最新の通知日数", select_max.ToString(), "OK");
-        }
     }
 }

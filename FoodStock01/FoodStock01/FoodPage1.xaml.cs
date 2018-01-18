@@ -182,11 +182,17 @@ namespace FoodStock01
             }
         }
 
-        void OnSearch_Clicked(object sender, EventArgs args)
+        //初回起動時の状態にします（テスト用）
+        private void Set_Start_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.Properties["qsl"] = true;
+        }
+
+        /*void OnSearch_Clicked(object sender, EventArgs args)
         {
             //ページ遷移
             Navigation.PushAsync(new NextPage(s));
-        }
+        }*/
 
         //引っ張ったとき（更新）
         private async void OnRefreshing(object sender, EventArgs e)
