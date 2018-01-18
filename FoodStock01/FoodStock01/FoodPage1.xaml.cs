@@ -83,13 +83,21 @@ namespace FoodStock01
             // AbsoluteLayout にコントロールを追加しますがその際に
             // Properties Dictionary をチェックして QuickStart Layer を追加しています。
             abs.Children.Add(ml);
+
+            //keyが格納されているか
             if (Application.Current.Properties.ContainsKey("qsl"))
             {
+                //初回true
                 var bqsl = (bool)Application.Current.Properties["qsl"];
                 if (bqsl)
                 {
                     abs.Children.Add(bl);
                     abs.Children.Add(qsl);
+                    Content = abs;
+                }//falseが格納されている(2回目以降)
+                else
+                {
+                    Content = ml;
                 }
                     
             }
@@ -97,12 +105,11 @@ namespace FoodStock01
             {
                 abs.Children.Add(bl);
                 abs.Children.Add(qsl);
+                Content = abs;
             }
-
-            Content = ml;
-
-            SizeChanged += OnPageSizeChanged;
+            //SizeChanged += OnPageSizeChanged;
         }
+        /*
         /// <summary>
         /// 画面サイズ変更時(起動して画面が表示される時)に呼び出されます。この後でないと画面サイズが取得できません。
         /// </summary>
@@ -119,6 +126,7 @@ namespace FoodStock01
             AbsoluteLayout.SetLayoutFlags(qsl, AbsoluteLayoutFlags.PositionProportional);
             AbsoluteLayout.SetLayoutBounds(qsl, new Rectangle(0d, 0d, w, h));
         }
+        */
 
         void ChackBoxChanged(object sender, bool isChecked)
         {

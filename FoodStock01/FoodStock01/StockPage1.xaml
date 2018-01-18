@@ -23,7 +23,7 @@
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
 
-                <Label Text="食材名" 
+                <Label Text="食品名" 
                        BackgroundColor="Transparent"
                        Grid.Column="0" Grid.Row="0"/>
                 <Label Text="数量" 
