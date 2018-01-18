@@ -66,7 +66,7 @@ namespace FoodStock01
                         new Button {
                             Text = "閉じる",
                             TextColor = Color.White,
-                            BackgroundColor = Color.FromHex("49d849"),
+                            BackgroundColor = Color.FromHex("1e90ff"),
                             BorderRadius = 5,
                             VerticalOptions = LayoutOptions.EndAndExpand,
                             Command = new Command (()=>{

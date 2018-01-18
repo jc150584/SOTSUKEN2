@@ -21,7 +21,7 @@
                     HorizontalOptions="End"
                     Clicked="OnSearch_Clicked"/>-->
 
-            <Grid Padding="0,0,0,10">
+            <Grid Padding="0,10,0,10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
