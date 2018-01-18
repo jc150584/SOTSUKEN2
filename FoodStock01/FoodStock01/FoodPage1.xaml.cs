@@ -43,7 +43,7 @@ namespace FoodStock01
             bl = new ContentView
             {
                 BackgroundColor = Color.Black,
-                Opacity = 0.65d,
+                Opacity = 0.6
             };
 
             // 更に上に View を被せました。
@@ -107,9 +107,9 @@ namespace FoodStock01
                 abs.Children.Add(qsl);
                 Content = abs;
             }
-            //SizeChanged += OnPageSizeChanged;
+            SizeChanged += OnPageSizeChanged;
         }
-        /*
+        
         /// <summary>
         /// 画面サイズ変更時(起動して画面が表示される時)に呼び出されます。この後でないと画面サイズが取得できません。
         /// </summary>
@@ -120,13 +120,16 @@ namespace FoodStock01
             var w = this.Width;
             var h = this.Height;
 
-            AbsoluteLayout.SetLayoutFlags(ml, AbsoluteLayoutFlags.PositionProportional);
-            AbsoluteLayout.SetLayoutBounds(ml, new Rectangle(0d, 0d, w, h));
+            /*AbsoluteLayout.SetLayoutFlags(ml, AbsoluteLayoutFlags.PositionProportional);
+            AbsoluteLayout.SetLayoutBounds(ml, new Rectangle(0d, 0d, w, h));*/
+
+            AbsoluteLayout.SetLayoutFlags(bl, AbsoluteLayoutFlags.PositionProportional);
+            AbsoluteLayout.SetLayoutBounds(bl, new Rectangle(0d, 0d, w, h));
 
             AbsoluteLayout.SetLayoutFlags(qsl, AbsoluteLayoutFlags.PositionProportional);
             AbsoluteLayout.SetLayoutBounds(qsl, new Rectangle(0d, 0d, w, h));
         }
-        */
+        
 
         void ChackBoxChanged(object sender, bool isChecked)
         {

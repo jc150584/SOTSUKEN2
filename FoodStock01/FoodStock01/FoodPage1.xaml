@@ -16,10 +16,10 @@
                      Margin="20, 10, 20, 10"
                      x:Name="ml">
 
-            <Button Image="search24.png"
+           <!-- <Button Image="search24.png"
                     Text="レシピ検索"
                     HorizontalOptions="End"
-                    Clicked="OnSearch_Clicked"/>
+                    Clicked="OnSearch_Clicked"/>-->
 
             <Grid Padding="0,0,0,10">
                 <Grid.RowDefinitions>
