@@ -68,7 +68,7 @@ namespace FoodStock01
                         },
                          new Image {
                             Source = "start_tab.png",
-                            VerticalOptions = LayoutOptions.End,
+                            VerticalOptions = LayoutOptions.EndAndExpand,
                         },
                         // 閉じると Application Properties に bool 値を保存します。
                         new Button {
