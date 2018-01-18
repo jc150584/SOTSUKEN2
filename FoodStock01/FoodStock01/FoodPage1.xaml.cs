@@ -61,13 +61,13 @@ namespace FoodStock01
                     Children = {
                         // 画像で誤魔化します
                         new Image {
-                            Source = "QuickStart.png",
-                            WidthRequest = 250,
-                            HorizontalOptions = LayoutOptions.End,
+                            Source = "start_search.png",
                         },
                         new Image {
-                            Source = "QuickStartSwipe.png",
-                            WidthRequest = 340,
+                            Source = "start_refresh.png",
+                        },
+                         new Image {
+                            Source = "start_tab.png",
                         },
                         // 閉じると Application Properties に bool 値を保存します。
                         new Button {
