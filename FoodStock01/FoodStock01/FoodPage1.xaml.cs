@@ -19,6 +19,11 @@ namespace FoodStock01
         ContentView bl; // 黒背景
         bool qslVisible = true;
 
+        public void Set_Start()
+        {
+            Application.Current.Properties["qsl"] = true;
+        }
+
         public FoodPage1(string title)
         {
             //タイトル
@@ -36,6 +41,8 @@ namespace FoodStock01
                 ),
             });
 
+
+            ///***********************初回起動時に表示されます ここから**********************///
             AbsoluteLayout abs = new AbsoluteLayout { };
 
             // 上に表示される View です。
@@ -67,7 +74,6 @@ namespace FoodStock01
                             Text = "閉じる",
                             TextColor = Color.White,
                             BackgroundColor = Color.FromHex("1e90ff"),
-                            BorderRadius = 5,
                             VerticalOptions = LayoutOptions.EndAndExpand,
                             Command = new Command (()=>{
                                 qsl.IsVisible = false;
@@ -85,6 +91,8 @@ namespace FoodStock01
                     }
                 }
             };
+            ///******************************** ここまで ************************************///
+
 
             // AbsoluteLayout にコントロールを追加しますがその際に
             // Properties Dictionary をチェックして QuickStart Layer を追加しています。

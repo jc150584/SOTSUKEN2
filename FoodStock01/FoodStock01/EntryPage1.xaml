@@ -8,11 +8,6 @@
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="BackgroundColor" Value="DodgerBlue" />
-                <Setter Property="FontSize" Value="20"/>
-                <Setter Property="HeightRequest" Value="60" />
-                <Setter Property="WidthRequest" Value="200" />
-                <Setter Property="Margin" Value="0,5,0,5" />
-                <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -108,7 +103,9 @@
             
             <Button Text="登録"
                     x:Name="Insert01"
-                    Clicked="Insert01_Clicked"/>
+                    Clicked="Insert01_Clicked"
+                    VerticalOptions="EndAndExpand"
+                    HeightRequest="50"/>
 
         </StackLayout>
     </ContentPage.Content>

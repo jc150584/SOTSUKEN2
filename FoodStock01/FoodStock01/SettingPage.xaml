@@ -73,6 +73,13 @@
                     x:Name="Select_Max"
                     Clicked="Select_Max_Clicked"/>
 
+            <Button Text="初回起動時に戻す"
+                    VerticalOptions="Center"
+                    x:Name="Set_Start"
+                    Clicked="Set_Start_Clicked"/>
+            <Label Text="↑後で消す"/>
+
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>
