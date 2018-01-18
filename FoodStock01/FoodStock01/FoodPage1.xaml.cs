@@ -129,8 +129,8 @@ namespace FoodStock01
             var w = this.Width;
             var h = this.Height;
 
-            /*AbsoluteLayout.SetLayoutFlags(ml, AbsoluteLayoutFlags.PositionProportional);
-            AbsoluteLayout.SetLayoutBounds(ml, new Rectangle(0d, 0d, w, h));*/
+            AbsoluteLayout.SetLayoutFlags(ml, AbsoluteLayoutFlags.PositionProportional);
+            AbsoluteLayout.SetLayoutBounds(ml, new Rectangle(0.5, 0d, w-20, h-10));
 
             AbsoluteLayout.SetLayoutFlags(bl, AbsoluteLayoutFlags.PositionProportional);
             AbsoluteLayout.SetLayoutBounds(bl, new Rectangle(0d, 0d, w, h));
