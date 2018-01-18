@@ -103,7 +103,10 @@ namespace FoodStock01
                 }//falseが格納されている(2回目以降)
                 else
                 {
-                    Content = ml;
+                    Title = "食材リスト";
+                    s = "http://cookpad.com/search/";
+
+                    InitializeComponent();
                 }
                     
             }
