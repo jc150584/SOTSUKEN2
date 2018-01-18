@@ -74,6 +74,12 @@ namespace FoodStock01
                                 bl.IsVisible = false;
                                 qslVisible = false;
                                 Application.Current.Properties["qsl"] = qslVisible;
+
+                                //画面再読み込み
+                                Title = "食材リスト";
+                                s = "http://cookpad.com/search/";
+                                InitializeComponent();
+
                             }),
                         },
                     }
