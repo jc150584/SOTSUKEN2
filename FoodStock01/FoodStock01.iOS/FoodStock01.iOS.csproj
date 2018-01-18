@@ -296,13 +296,13 @@
     <BundleResource Include="Resources\QuickStartSwipe.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\start_refresh.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\start_search.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\start_tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\start_refresh.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
