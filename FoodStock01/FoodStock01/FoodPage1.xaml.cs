@@ -19,11 +19,6 @@ namespace FoodStock01
         ContentView bl; // 黒背景
         bool qslVisible = true;
 
-        public void Set_Start()
-        {
-            Application.Current.Properties["qsl"] = true;
-        }
-
         public FoodPage1(string title)
         {
             //タイトル
