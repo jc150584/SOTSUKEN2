@@ -68,6 +68,7 @@ namespace FoodStock01
                         },
                          new Image {
                             Source = "start_tab.png",
+                            VerticalOptions = LayoutOptions.End,
                         },
                         // 閉じると Application Properties に bool 値を保存します。
                         new Button {
@@ -138,7 +139,7 @@ namespace FoodStock01
             var h = this.Height;
 
             AbsoluteLayout.SetLayoutFlags(ml, AbsoluteLayoutFlags.PositionProportional);
-            AbsoluteLayout.SetLayoutBounds(ml, new Rectangle(0.5, 0d, w-20, h-10));
+            AbsoluteLayout.SetLayoutBounds(ml, new Rectangle(10, 10, w-20, h));
 
             AbsoluteLayout.SetLayoutFlags(bl, AbsoluteLayoutFlags.PositionProportional);
             AbsoluteLayout.SetLayoutBounds(bl, new Rectangle(0d, 0d, w, h));
