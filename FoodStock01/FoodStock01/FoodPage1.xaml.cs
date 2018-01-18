@@ -65,6 +65,9 @@ namespace FoodStock01
                         // 閉じると Application Properties に bool 値を保存します。
                         new Button {
                             Text = "閉じる",
+                            TextColor = Color.White,
+                            BackgroundColor = Color.FromHex("49d849"),
+                            BorderRadius = 5,
                             VerticalOptions = LayoutOptions.EndAndExpand,
                             Command = new Command (()=>{
                                 qsl.IsVisible = false;
@@ -84,15 +87,19 @@ namespace FoodStock01
             {
                 var bqsl = (bool)Application.Current.Properties["qsl"];
                 if (bqsl)
+                {
+                    abs.Children.Add(bl);
                     abs.Children.Add(qsl);
+                }
+                    
             }
             else
             {
+                abs.Children.Add(bl);
                 abs.Children.Add(qsl);
             }
 
-            Title = "QuickStartLayer";
-            Content = abs;
+            Content = ml;
 
             SizeChanged += OnPageSizeChanged;
         }
