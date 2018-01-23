@@ -92,6 +92,7 @@
       <DependentUpon>StockPage1.xaml</DependentUpon>
     </Compile>
     <Compile Include="StockPageViewModel.cs" />
+    <Compile Include="TodayModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
