@@ -184,7 +184,7 @@ namespace FoodStock01
         private void Set_Start_Clicked(object sender, EventArgs e)
         {
             DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-            string today = d.ToString();
+            string today = d.ToString("yyyy/MM/dd");
             Application.Current.Properties[today] = true;
         }
 
@@ -192,7 +192,7 @@ namespace FoodStock01
         protected override void OnAppearing()
         {
             DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-            string today = d.ToString();
+            string today = d.ToString("yyyy/MM/dd");
 
             //きょうはじめて？？
             if (Application.Current.Properties.ContainsKey(today))
