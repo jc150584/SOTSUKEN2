@@ -192,16 +192,26 @@ namespace FoodStock01
         {
             DateTime today = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             string todays = today.ToString("yyyy/MM/dd");
-            DateTime lastdate = (DateTime)Application.Current.Properties["date"];
 
-            //今日と保存されている日付を比較
-            if (!(lastdate == today))
+            //keyが格納されているか
+            if (Application.Current.Properties.ContainsKey("date"))
             {
-                //今日まだ
-                DisplayAlert("title", todays, "ok");
-                Application.Current.Properties["date"] = today;
+                DateTime lastdate = (DateTime)Application.Current.Properties["date"];
+
+                //今日と保存されている日付を比較
+                if (!(lastdate == today))
+                {
+                    //今日まだ
+                    DisplayAlert("title", todays, "ok");
+                    Application.Current.Properties["date"] = today;
+                }
+                
             }
-            else{}
+            else//はじめて
+            {
+                    DisplayAlert("title", todays, "ok");
+                    Application.Current.Properties["date"] = today;
+            }
         }
 
         //引っ張ったとき（更新）
