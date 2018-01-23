@@ -103,6 +103,11 @@ namespace FoodStock01
                     DisplayAlert("title", today, "ok");
                 }
             }
+            else
+            {
+                Application.Current.Properties[today] = false;
+                DisplayAlert("title", today, "ok");
+            }
             
             ///******************************** ここまで ************************************///
 
@@ -198,7 +203,9 @@ namespace FoodStock01
         //初回起動時の状態にします（テスト用）
         private void Set_Start_Clicked(object sender, EventArgs e)
         {
-            Application.Current.Properties["qsl"] = true;
+            DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            string today = d.ToString();
+            Application.Current.Properties[today] = true;
         }
 
         //引っ張ったとき（更新）
