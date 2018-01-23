@@ -88,28 +88,6 @@ namespace FoodStock01
                     }
                 }
             };
-
-            /*********************************** アラートやりたい ***********************************/
-            DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-            string today = d.ToString();
-            DisplayAlert("title", today, "ok");
-
-            //きょうはじめて？？
-            if (Application.Current.Properties.ContainsKey(today))
-            {
-                //初回true
-                var bqsl = (bool)Application.Current.Properties[today];
-                if (bqsl)
-                {
-                    Application.Current.Properties[today] = false;
-                    DisplayAlert("title", today, "ok");
-                }
-            }
-            else
-            {
-                Application.Current.Properties[today] = false;
-                DisplayAlert("title", today, "ok");
-            }
             
             ///******************************** ここまで ************************************///
 
@@ -208,6 +186,30 @@ namespace FoodStock01
             DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             string today = d.ToString();
             Application.Current.Properties[today] = true;
+        }
+
+        //読み込まれたとき
+        protected override void OnAppearing()
+        {
+            DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            string today = d.ToString();
+
+            //きょうはじめて？？
+            if (Application.Current.Properties.ContainsKey(today))
+            {
+                //初回true
+                var bqsl = (bool)Application.Current.Properties[today];
+                if (bqsl)
+                {
+                    Application.Current.Properties[today] = false;
+                    DisplayAlert("title", today, "ok");
+                }
+            }
+            else
+            {
+                Application.Current.Properties[today] = false;
+                DisplayAlert("title", today, "ok");
+            }
         }
 
         //引っ張ったとき（更新）
