@@ -51,7 +51,7 @@ namespace FoodStock01
             var buttonAdd = new Button
             {
                 WidthRequest = 60,
-                TextColor = Color.Black,
+                TextColor = Color.White,
                 Text = "追加"
             };
             buttonAdd.Clicked += (s, a) =>
@@ -88,7 +88,7 @@ namespace FoodStock01
                     {
                         new StackLayout
                         {
-                            BackgroundColor = Color.YellowGreen,
+                            BackgroundColor = Color.DodgerBlue,
                             Padding = 5,
                             Orientation = StackOrientation.Horizontal,
                             Children = {entry,buttonAdd}//Entryコントロールとボタンコントロールを配置
