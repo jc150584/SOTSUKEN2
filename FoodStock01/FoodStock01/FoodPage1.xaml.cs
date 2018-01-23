@@ -15,7 +15,7 @@ namespace FoodStock01
     {
         String s = "http://cookpad.com/search/";
 
-        ContentView qsl; // iOS/Android 用
+        //ContentView qsl; // iOS/Android 用
         ContentView bl; // 黒背景
         bool qslVisible = true;
 
@@ -48,6 +48,7 @@ namespace FoodStock01
                 Opacity = 0.6
             };
 
+            /*
             // 更に上に View を被せました。
             qsl = new ContentView
             {
@@ -86,7 +87,7 @@ namespace FoodStock01
                         },
                     }
                 }
-            };
+            };*/
             ///******************************** ここまで ************************************///
 
 
@@ -202,6 +203,19 @@ namespace FoodStock01
             Title = "食材リスト";
             s = "http://cookpad.com/search/";
 
+            InitializeComponent();
+        }
+
+        private void xbutton_Clicked(object sender, EventArgs e)
+        {
+            qsl.IsVisible = false;
+            bl.IsVisible = false;
+            qslVisible = false;
+            Application.Current.Properties["qsl"] = qslVisible;
+
+            //画面再読み込み
+            Title = "食材リスト";
+            s = "http://cookpad.com/search/";
             InitializeComponent();
         }
     }

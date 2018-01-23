@@ -96,7 +96,7 @@
                                                         NoText="{Binding F_no}"
                                                         NameText="{Binding F_name}"/>
                             </Grid>
-                            
+
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -108,5 +108,22 @@
                     VerticalOptions="EndAndExpand"
                     Clicked="Set_Start_Clicked"/>
         </StackLayout>
+        
+        <ContentView x:Name="qsl">
+            <StackLayout>
+                <StackLayout>
+                    <Image Source="start_search.png"/>
+                    <Image Source="start_refresh.png" />
+                    <Image Source="start_tab.png"
+                           VerticalOptions="EndAndExpand"/>
+                </StackLayout>
+                <Button x:Name="xbutton"
+                        TextColor="White"
+                        BackgroundColor="DodgerBlue"
+                        VerticalOptions="EndAndExpand"
+                        Clicked="xbutton_Clicked"/>
+            </StackLayout>
+        </ContentView>
     </ContentPage.Content>
 </ContentPage>
+   
