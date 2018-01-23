@@ -183,33 +183,25 @@ namespace FoodStock01
         //初回起動時の状態にします（テスト用）
         private void Set_Start_Clicked(object sender, EventArgs e)
         {
-            DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-            string today = d.ToString("yyyy/MM/dd");
-            Application.Current.Properties[today] = true;
+            DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day -1);
+            Application.Current.Properties["date"] = d;
         }
 
         //読み込まれたとき
         protected override void OnAppearing()
         {
-            DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-            string today = d.ToString("yyyy/MM/dd");
+            DateTime today = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            string todays = today.ToString("yyyy/MM/dd");
+            DateTime lastdate = (DateTime)Application.Current.Properties["date"];
 
-            //きょうはじめて？？
-            if (Application.Current.Properties.ContainsKey(today))
+            //今日と保存されている日付を比較
+            if (!(lastdate == today))
             {
-                //初回true
-                var bqsl = (bool)Application.Current.Properties[today];
-                if (bqsl)
-                {
-                    Application.Current.Properties[today] = false;
-                    DisplayAlert("title", today, "ok");
-                }
+                //今日まだ
+                DisplayAlert("title", todays, "ok");
+                Application.Current.Properties["date"] = today;
             }
-            else
-            {
-                Application.Current.Properties[today] = false;
-                DisplayAlert("title", today, "ok");
-            }
+            else{}
         }
 
         //引っ張ったとき（更新）
