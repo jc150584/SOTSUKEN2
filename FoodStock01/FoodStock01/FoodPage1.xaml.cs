@@ -90,8 +90,8 @@ namespace FoodStock01
             };
 
             /*********************************** アラートやりたい ***********************************/
-            
-            string today = TodayModel.SelectToday();//今日の日付
+            DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            string today = d.ToString();
             //きょうはじめて？？
             if (Application.Current.Properties.ContainsKey(today))
             {
