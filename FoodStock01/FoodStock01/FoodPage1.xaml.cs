@@ -92,6 +92,8 @@ namespace FoodStock01
             /*********************************** アラートやりたい ***********************************/
             DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             string today = d.ToString();
+            DisplayAlert("title", today, "ok");
+
             //きょうはじめて？？
             if (Application.Current.Properties.ContainsKey(today))
             {
