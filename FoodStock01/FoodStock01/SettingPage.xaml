@@ -79,7 +79,8 @@
                     Clicked="new_Clicked"/>
 
             <Label Text="↑次回起動時にチュートリアル画面を表示します"
-                   FontSize="Small"/>
+                   FontSize="Small"
+                   HorizontalOptions="Center"/>
 
         </StackLayout>
         
