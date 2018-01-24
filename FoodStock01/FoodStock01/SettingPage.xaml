@@ -73,7 +73,7 @@
                     x:Name="Select_Max"
                     Clicked="Select_Max_Clicked"/>
 
-            <Button Text="次回起動時チュートリアルを表示"
+            <Button Text="チュートリアル表示"
                     VerticalOptions="End"
                     x:Name="new"
                     Clicked="new_Clicked"/>
