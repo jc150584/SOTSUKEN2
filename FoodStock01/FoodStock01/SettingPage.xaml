@@ -78,6 +78,9 @@
                     x:Name="new"
                     Clicked="new_Clicked"/>
 
+            <Label Text="↑次回起動時にチュートリアル画面を表示します"
+                   FontSize="Small"/>
+
         </StackLayout>
         
     </ContentPage.Content>
