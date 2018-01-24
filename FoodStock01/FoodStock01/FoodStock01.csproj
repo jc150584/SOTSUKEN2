@@ -66,9 +66,6 @@
     <Compile Include="MemoModel.cs" />
     <Compile Include="MemoNavi.cs" />
     <Compile Include="MemoPage.cs" />
-    <Compile Include="MemoPage1.xaml.cs">
-      <DependentUpon>MemoPage1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="NextPage.xaml.cs">
       <DependentUpon>NextPage.xaml</DependentUpon>
     </Compile>
@@ -84,10 +81,8 @@
     <Compile Include="SettingPage.xaml.cs">
       <DependentUpon>SettingPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SettingPage00.cs" />
     <Compile Include="StockFoodModel.cs" />
     <Compile Include="StockNavi.cs" />
-    <Compile Include="StockPage.cs" />
     <Compile Include="StockPage1.xaml.cs">
       <DependentUpon>StockPage1.xaml</DependentUpon>
     </Compile>
@@ -165,12 +160,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="StockPage1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="MemoPage1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
