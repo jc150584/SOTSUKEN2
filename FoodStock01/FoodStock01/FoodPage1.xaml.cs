@@ -202,8 +202,12 @@ namespace FoodStock01
                 if (!(lastdate == today))
                 {
                     //今日まだ
-                    DisplayAlert("title", todays, "ok");
-                    Application.Current.Properties["date"] = today;
+                    if (FoodModel.SelectF_result() != -999 && FoodModel.SelectF_result() > 0)
+                    {
+                        //DisplayAlert("消費期限通知", "期限が近づいている食材があります", "OK");
+                        DisplayAlert("消費期限通知", "消費期限まであと" + SettingModel.SelectSetting_Max().ToString() + "日の食材があります", "OK");
+                        Application.Current.Properties["date"] = today;
+                    }
                 }
                 
             }

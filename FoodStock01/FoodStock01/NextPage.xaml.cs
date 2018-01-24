@@ -24,6 +24,7 @@ namespace FoodStock01
                 HorizontalOptions = LayoutOptions.FillAndExpand,      
             };
             Content = Recipe;
+
         }
     }
 }
