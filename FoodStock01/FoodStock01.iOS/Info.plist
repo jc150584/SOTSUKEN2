@@ -67,5 +67,7 @@
 	<string>食品管理</string>
 	<key>XSAppIconAssets</key>
 	<string>Resources/Media.xcassets/AppIcons.appiconset</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
 </dict>
 </plist>
