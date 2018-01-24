@@ -27,7 +27,6 @@ namespace FoodStock01
                    new EntryNavi(new EntryPage1("登録")),
                    new MemoNavi(new MemoPage("メモ")),
                    new SettingNavi(new SettingPage("設定")),
-                   //new RecipePage("レシピ")
                 }
             };
         }
