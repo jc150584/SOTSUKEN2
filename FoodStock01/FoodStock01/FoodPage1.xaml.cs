@@ -185,6 +185,7 @@ namespace FoodStock01
         {
             DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day -1);
             Application.Current.Properties["date"] = d;
+            Application.Current.Properties["qsl"] = true;
         }
 
         //読み込まれたとき
@@ -202,19 +203,22 @@ namespace FoodStock01
                 if (!(lastdate == today))
                 {
                     //今日まだ
+                    Application.Current.Properties["date"] = today;
+                    //期限付き
                     if (FoodModel.SelectF_result() != -999 && FoodModel.SelectF_result() > 0)
                     {
-                        //DisplayAlert("消費期限通知", "期限が近づいている食材があります", "OK");
                         DisplayAlert("消費期限通知", "消費期限まであと" + SettingModel.SelectSetting_Max().ToString() + "日の食材があります", "OK");
-                        Application.Current.Properties["date"] = today;
                     }
                 }
                 
             }
             else//はじめて
             {
-                    DisplayAlert("title", todays, "ok");
-                    Application.Current.Properties["date"] = today;
+                Application.Current.Properties["date"] = today;
+                if (FoodModel.SelectF_result() != -999 && FoodModel.SelectF_result() > 0)
+                {
+                    DisplayAlert("消費期限通知", "消費期限まであと" + SettingModel.SelectSetting_Max().ToString() + "日の食材があります", "OK");
+                }
             }
         }
 
