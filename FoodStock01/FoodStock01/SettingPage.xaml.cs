@@ -65,5 +65,12 @@ namespace FoodStock01
 
             DisplayAlert("最新の通知日数", select_max.ToString(), "OK");
         }
+
+        //次回起動時チュートリアル表示
+        private void new_Clicked(object sender, EventArgs e)
+        {
+            DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day - 1);
+            Application.Current.Properties["qsl"] = true;
+        }
     }
 }

@@ -180,13 +180,13 @@ namespace FoodStock01
             }
         }
 
-        //初回起動時の状態にします（テスト用）
+        /*//初回起動時の状態にします（テスト用）
         private void Set_Start_Clicked(object sender, EventArgs e)
         {
             DateTime d = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day -1);
             Application.Current.Properties["date"] = d;
             Application.Current.Properties["qsl"] = true;
-        }
+        }*/
 
         //読み込まれたとき
         protected override void OnAppearing()
