@@ -206,7 +206,7 @@ namespace FoodStock01
                     //期限付き
                     if (FoodModel.SelectF_result() != -999 && FoodModel.SelectF_result() > 0)
                     {
-                        DisplayAlert("消費期限通知", "消費期限まであと" + SettingModel.SelectSetting_Max().ToString() + "日の食材があります", "OK");
+                        DisplayAlert("期限通知", "期限まであと" + SettingModel.SelectSetting_Max().ToString() + "日の食材があります", "OK");
                     }
                 }
                 
@@ -216,7 +216,7 @@ namespace FoodStock01
                 Application.Current.Properties["date"] = today;
                 if (FoodModel.SelectF_result() != -999 && FoodModel.SelectF_result() > 0)
                 {
-                    DisplayAlert("消費期限通知", "消費期限まであと" + SettingModel.SelectSetting_Max().ToString() + "日の食材があります", "OK");
+                    DisplayAlert("期限通知", "期限まであと" + SettingModel.SelectSetting_Max().ToString() + "日の食材があります", "OK");
                 }
             }
         }
