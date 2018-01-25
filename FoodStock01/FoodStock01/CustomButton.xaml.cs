@@ -67,11 +67,7 @@ namespace FoodStock01
                    CustomButton button = (CustomButton)bindable;
 
                    //イベント発行
-                   EventHandler<bool> eventHandler = button.CheckedChanged;
-                   if (eventHandler != null)
-                   {
-                       eventHandler(button, (bool)newValue);
-                   }
+                   button.CheckedChanged?.Invoke(button, (bool)newValue);
                });
 
         public event EventHandler<bool> CheckedChanged;
