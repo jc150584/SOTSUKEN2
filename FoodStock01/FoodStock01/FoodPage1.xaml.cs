@@ -206,7 +206,8 @@ namespace FoodStock01
                     //期限付き
                     if (FoodModel.SelectF_result() != -999 && FoodModel.SelectF_result() > 0)
                     {
-                        DisplayAlert("期限通知", "期限まであと" + SettingModel.SelectSetting_Max().ToString() + "日の食材があります", "OK");
+                        //DisplayAlert("期限通知", "期限まであと" + SettingModel.SelectSetting_Max().ToString() + "日の食材があります", "OK");
+                        DisplayAlert("期限通知", "期限が近づいている食材があります", "OK");
                     }
                 }
                 
