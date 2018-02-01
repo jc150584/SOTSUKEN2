@@ -21,39 +21,7 @@ namespace FoodStock01
 
 
         public FoodPageViewModel()
-        {
-            /*************おかしくなったらここを解除****************/
-            /*
-            if (FoodModel.SelectFood() != null)
-            {
-                
-                var query = FoodModel.SelectFood();
-                Foods = new ObservableCollection<Food>();
-                foreach (var food in query)
-                {
-                    Food f = new Food
-                    {
-                        F_no = food.F_no,
-                        F_name = food.F_name,
-                        F_result = food.F_result,
-                        F_date = food.F_date
-                    };
-                    Foods.Add(f);
-                }
-            }
-            else
-            {
-                Foods = new ObservableCollection<Food> {
-                    new Food {
-                       F_name = "NoData",
-                       //F_date = new DateTime(1970,1,1)
-                       F_result = 999
-                    }
-                };
-            }
-            */
-
-            /**********************ダメだったらここを消す********************/
+        {        
             if (FoodModel.SelectFood() != null)
             {
                 var query01 = FoodModel.SelectFood();
@@ -71,7 +39,7 @@ namespace FoodStock01
 
                     FoodModel.UpdateF_date(food01.F_no, food01.F_name, food01.F_result, food01.F_date);
                     Foods.Add(f01);
-                    //FoodModel.UpdateF_date(food01.F_no, food01.F_name, food01.F_result, food01.F_date);
+                   
                 }
 
                 Foods = new ObservableCollection<Food>();
@@ -94,13 +62,10 @@ namespace FoodStock01
                 Foods = new ObservableCollection<Food> {
                     new Food {
                        F_name = "NoData",
-                       //F_date = new DateTime(1970,1,1)
                        F_result = 999
                     }
                 };
-            }
-            /****************************************************************/
-
+            }            
         }
 
     }

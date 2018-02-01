@@ -79,7 +79,7 @@ namespace FoodStock01
             }
         }
 
-        /*******************セレクトメソッド（試し）*************************************/
+        /*******************セレクトメソッド（FoodModelで使う）*************************************/
         public static int SelectSetting_Max()
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))

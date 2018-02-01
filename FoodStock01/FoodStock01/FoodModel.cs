@@ -19,10 +19,6 @@ namespace FoodStock01
 
         public DateTime F_date { get; set; } //消費期限
 
-        public string F_limit { get; set; } //現在時刻との差（後で使うかも）
-
-        public TimeSpan F_span { get; set; } //現在日時との差（後で使うかも）
-
         /********************インサートメソッド**********************************/
         public static void InsertFood(int f_no, string f_name, int f_result, DateTime f_date)
         {
@@ -87,28 +83,6 @@ namespace FoodStock01
             }
         }
 
-        /********************オールデリートメソッド*************************************/
-        public static void DeleteAllFood()
-        {
-            //データベースに接続する
-            using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
-            {
-                try
-                {
-                    //データベースにFoodテーブルを作成する
-                    db.CreateTable<FoodModel>();
-
-                    db.DeleteAll<FoodModel>();//デリートで渡す値は主キーじゃないといけない説
-                    db.Commit();
-                }
-                catch (Exception e)
-                {
-                    db.Rollback();
-                    System.Diagnostics.Debug.WriteLine(e);
-                }
-            }
-        }
-
         /********************アップデートメソッド（日付）*************************************/
         public static void UpdateF_date(int f_no, string f_name, int f_result, DateTime f_date)
         {
@@ -137,7 +111,7 @@ namespace FoodStock01
             }
         }
 
-        /************************************ここから通知を試すためのセレクトメソッド************************************/
+        /************************************通知のセレクトメソッド************************************/
         public static int SelectF_result()
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
@@ -174,6 +148,6 @@ namespace FoodStock01
                 }
             }
         }
-        /************************************ここまで通知を試すためのセレクトメソッド************************************/
+        /************************************通知のセレクトメソッド************************************/
     }
 }

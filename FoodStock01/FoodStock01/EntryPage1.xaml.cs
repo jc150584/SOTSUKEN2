@@ -15,7 +15,7 @@ namespace FoodStock01
         /***ここからフィールド***/
         DateTime yyyymmdd; //フードピッカーの値を一時的に保持する
 
-        TimeSpan s; //後で使うかも
+        TimeSpan s; 
 
         DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);//現在日付
 
@@ -141,13 +141,7 @@ namespace FoodStock01
             }
 
         }
-
-        /***************「すべて削除ボタン」が押された時********************/
-        private void Insert02_Clicked(object sender, EventArgs e)
-        {
-            FoodModel.DeleteAllFood();
-        }
-
+        
         /*************フードピッカーで日付を選択したとき******************/
         private void FoodPicker_DateSelected(object sender, DateChangedEventArgs e)
         {
@@ -158,7 +152,7 @@ namespace FoodStock01
             result = s.Days;
         }
 
-        /*************日付関係の試し（たぶん使わない）*********************************************/
+        /*************日付関係の試し*********************************************/
         public static int Span(DateTime d)
         {
             TimeSpan t = d - new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);

@@ -80,13 +80,13 @@ namespace FoodStock01
             string unit2 = ((CustomButtonMinus)sender).UnitText;
 
             int s_no2 = int.Parse(no2);//
-            /***ここから試し***/
+            
             StockFoodModel.UpdateStockMinus(s_no2, name2, num2, unit2);
 
             Title = "保存食品リスト";
 
             InitializeComponent();
-            /***ここまで試し***/
+            
         }
     }
 }
