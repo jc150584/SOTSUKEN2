@@ -115,26 +115,34 @@ namespace FoodStock01
                 else//保存食品の登録だったら
                 {
                     if ((!(NumEntry.Text == null) && !(NumEntry.Text.Equals(""))) && (!(UnitEntry.Text == null) && !(UnitEntry.Text.Equals("")))) {
-                        if (!(yyyymmdd.ToString("yyyy/MM/dd").Equals("0001/01/01")))//日付が入力されている
+                        qty = int.Parse(NumEntry.Text);
+                        if (qty >= 0) //数量がプラス
                         {
-                            qty = int.Parse(NumEntry.Text);
-                            StockFoodModel.InsertStock(1, NameEntry.Text, qty, UnitEntry.Text);
-                            DisplayAlert(NameEntry.Text, qty.ToString() + UnitEntry.Text, "OK");
 
-                            NameEntry.Text = "";
-                            NumEntry.Text = "";
-                            UnitEntry.Text = "";
+
+                            /*if (!(yyyymmdd.ToString("yyyy/MM/dd").Equals("0001/01/01")))//日付が入力されている
+                            {
+                                StockFoodModel.InsertStock(1, NameEntry.Text, qty, UnitEntry.Text);
+                                DisplayAlert(NameEntry.Text, qty.ToString() + UnitEntry.Text, "OK");
+
+                                NameEntry.Text = "";
+                                NumEntry.Text = "";
+                                UnitEntry.Text = "";
+                            }
+                            else
+                            {
+                                yyyymmdd = now;*/
+                                StockFoodModel.InsertStock(1, NameEntry.Text, qty, UnitEntry.Text);
+                                DisplayAlert(NameEntry.Text, qty.ToString() + UnitEntry.Text, "OK");
+
+                                NameEntry.Text = "";
+                                NumEntry.Text = "";
+                                UnitEntry.Text = "";
+                           // }
                         }
                         else
                         {
-                            yyyymmdd = now;
-                            qty = int.Parse(NumEntry.Text);
-                            StockFoodModel.InsertStock(1, NameEntry.Text, qty, UnitEntry.Text);
-                            DisplayAlert(NameEntry.Text, qty.ToString() + UnitEntry.Text, "OK");
-
-                            NameEntry.Text = "";
-                            NumEntry.Text = "";
-                            UnitEntry.Text = "";
+                            DisplayAlert("入力エラー", "数量がマイナスです", "OK");
                         }
                     }
                     else
