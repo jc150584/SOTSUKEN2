@@ -86,16 +86,6 @@ namespace FoodStock01
                 {
                     if (!(yyyymmdd.ToString("yyyy/MM/dd").Equals("0001/01/01")))//日付が入力されている
                     {
-                        FoodModel.InsertFood(1, NameEntry.Text, result, yyyymmdd);//試し
-                        DisplayAlert(NameEntry.Text + yyyymmdd.ToString("yyyy/MM/dd"), "あと" + result.ToString() + "日", "OK");
-
-                        NameEntry.Text = "";
-
-                        FoodPicker.Date = new DateTime(now.Year, now.Month, now.Day);
-                    }
-                    else
-                    {
-                        yyyymmdd = now;
                         if (result < 0)
                         {
                             DisplayAlert("期限入力エラー", "日付が現在より前のものになっています", "OK");
@@ -106,8 +96,18 @@ namespace FoodStock01
                             DisplayAlert(NameEntry.Text + yyyymmdd.ToString("yyyy/MM/dd"), "あと" + result.ToString() + "日", "OK");
 
                             NameEntry.Text = "";
+
                             FoodPicker.Date = new DateTime(now.Year, now.Month, now.Day);
-                        } 
+                        }
+                    }
+                    else
+                    {
+                        yyyymmdd = now;
+                            FoodModel.InsertFood(1, NameEntry.Text, result, yyyymmdd);//試し
+                            DisplayAlert(NameEntry.Text + yyyymmdd.ToString("yyyy/MM/dd"), "あと" + result.ToString() + "日", "OK");
+
+                            NameEntry.Text = "";
+                            FoodPicker.Date = new DateTime(now.Year, now.Month, now.Day);
 
                         //FoodPicker.Date = new DateTime(now.Year, now.Month, now.Day);
                     }
